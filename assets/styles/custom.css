@@ -1,0 +1,555 @@
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow: hidden;
+    background-color: #f5f6f7;
+}
+
+@font-face {
+    font-family: 'GEInspiraSans-Regular';
+    src: url('./fonts/GEInspiraSans-Regular/GEInspiraSans-Regular.eot') format('embedded-opentype'), url('./fonts/GEInspiraSans-Regular/GEInspiraSans-Regular.otf') format('opentype'), url('./fonts/GEInspiraSans-Regular/GEInspiraSans-Regular.woff') format('woff'), url('./fonts/GEInspiraSans-Regular/GEInspiraSans-Regular.ttf') format('truetype'), url('./fonts/GEInspiraSans-Regular/GEInspiraSans-Regular.svg#GEInspiraSans-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.imagebg {
+    background: url(../images/bg2.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+}
+
+.logo {
+    font-family: 'GEInspiraSans-Regular';
+    font-size: 65px;
+    text-align: center;
+    color: white;
+    margin-top: 110px;
+}
+
+.title_nc {
+    font-family: 'Open Sans';
+    font-size: 36px;
+    margin-top: 40px;
+    text-align: center;
+    color: white;
+}
+
+.title_login {
+    font-family: 'Open Sans';
+    font-size: 36px;
+    margin: 30px 0 40px 0;
+    text-align: center;
+    color: black;
+}
+
+.login_box {
+    width: 100%;
+    background-color: rgba(227, 225, 225, 0.73);
+    margin: 60px 0 100px 0;
+    border-radius: 5px;
+    border: #acacac 1px solid;
+}
+
+.btn.btn-link {
+    font-family: 'Open Sans';
+    float: right;
+    font-size: 15px;
+    margin: 5px 20px;
+    color: white;
+}
+
+form.ng-dirty.ng-touched.ng-valid {
+    text-align: center!important;
+}
+
+.form-group {
+    text-align: center!important;
+    width: 100%;
+}
+
+.username {
+    margin: 0 20px;
+    font-size: 12pt;
+    width: 80%;
+    height: 40px;
+    padding: 5px;
+    border: 1px solid white;
+    background-color: white;
+    border-radius: 2px;
+}
+
+.pswd {
+    margin: 0px 20px;
+    font-size: 12pt;
+    width: 80%;
+    height: 40px;
+    padding: 5px;
+    border: 1px solid white;
+    background-color: white;
+    border-radius: 2px;
+}
+
+.help-block.login {
+    margin-left: 12%;
+}
+
+.login_btn {
+    margin: 20px 20px 30px 20px;
+    font-weight: bold;
+    font-size: 12pt;
+    width: 80%;
+    height: 45px;
+    color: black;
+    background-color: #ffffff;
+    border-radius: 5px;
+    border: 1px solid white;
+}
+
+.ui.top.attached.menu {
+    background: black;
+    height: 58px;
+    border-radius: 0px;
+    border: none;
+}
+
+.sidebar.icon {
+    margin-left: 0px !important;
+    float: left;
+    color: white;
+    padding: 0px!important;
+    font-size: 2em!important;
+}
+
+.ui.pointing.dropdown.button {
+    padding: 0px;
+    font-family: 'Open Sans';
+    float: right;
+    margin: 25px 15px;
+    color: white;
+    background-color: black;
+}
+
+.ui.pointing.dropdown.button:hover {
+    color: white;
+    background-color: black;
+}
+
+.ui.pointing.dropdown.button>.text {
+    background-color: black!important;
+    margin-right: 16px;
+}
+
+.item.menu {
+    padding: 7px 0 0 0!important;
+    margin-top: 10px;
+}
+
+.set_icon {
+    margin: 0px 0px 0px 35px!important;
+    padding: 0 20px 10px 0px;
+    float: left!important;
+    color: white!important;
+}
+
+.help_icon {
+    margin: -2px 20px 20px 10px!important;
+    padding: -10px 0 0 0px;
+    float: left!important;
+    color: white!important;
+}
+
+.ui.vertical.menu>.item {
+    margin: 0 0 0 0px!important;
+    padding: 20px 0 0 0!important;
+}
+
+.ui.vertical.menu>.item>li {
+    padding: 2px 0 0 20px!important;
+}
+
+.ui.vertical.menu>.item>li:hover {
+    background-color: #303235;
+}
+
+.ui.vertical.menu>.item:last-child {
+    padding: 20px 0 20px 10px!important;
+}
+
+.ui.checkbox label,
+.ui.checkbox+label {
+    color: white!important;
+    margin-left: 20px!important;
+    padding-left: 20px;
+}
+
+.svg_icon {
+    margin: 5px!important;
+}
+
+.menu_head {
+    font-family: 'GEInspiraSans-Regular';
+    font-size: 28px;
+    text-align: left;
+    color: white;
+    margin: 0px 10px;
+    padding-bottom: 0px;
+}
+
+.menu_subhead {
+    font-family: 'GEInspiraSans-Regular';
+    font-size: 18px;
+    text-align: left;
+    color: white;
+    margin: 0px 10px;
+    font-weight: initial;
+}
+
+.ui.form.ng-untouched.ng-pristine.ng-valid {
+    margin: 10px 13px!important;
+}
+
+.ui.blue.button {
+    padding: 11px;
+}
+
+.ui.blue.button span {
+    font-family: 'Open Sans';
+    margin: 0px 5px 2px 6px;
+    position: sticky;
+    float: right;
+    padding-left: 0px!important;
+}
+
+.ui.purple.button {
+    padding: 11px;
+}
+
+.ui.purple.button span {
+    font-family: 'Open Sans';
+    margin: 0px 5px 2px 6px;
+    position: sticky;
+    float: right;
+}
+
+.ui.red.button {
+    padding: 11px;
+}
+
+.ui.red.button span {
+    font-family: 'Open Sans';
+    margin: 0px 5px 2px 6px;
+    position: sticky;
+    float: right;
+}
+
+.ui.green.button {
+    padding: 11px;
+}
+
+.ui.green.button span {
+    font-family: 'Open Sans';
+    margin: 0px 5px 2px 6px;
+    position: sticky;
+    float: right;
+}
+
+.ui.orange.button {
+    padding: 11px;
+}
+
+.ui.orange.button span {
+    font-family: 'Open Sans';
+    margin: 0px 5px 2px 6px;
+    position: sticky;
+    float: right;
+}
+
+.ui.attached.menu:not(.tabular) {
+    border: none!important;
+    border-radius: none!important;
+}
+
+.ui.radio.checkbox label {
+    color: black!important;
+}
+
+sui-sidebar-container.ui.bottom.attached.segment.pushable {
+    position: absolute;
+    top: 58px;
+    bottom: -30px;
+    overflow: hidden;
+    overflow-y: auto;
+    height: initial;
+    display: block;
+}
+
+sui-sidebar-sibling {
+    min-height: calc(100% - 29px);
+}
+
+.ui.basic.segment.bg {
+    /*background-color: #f5f6f7;
+    padding: 1%!important;*/
+    /*height: 91vh !important;*/
+    /* padding: 5px 5px 0 5px!important; */
+    padding: 15px !important;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    left: 0;
+}
+
+.vh100 {
+    height: 100vh;
+}
+
+.height100 {
+    height: 100%;
+}
+
+agm-map {
+    height: 100% !important;
+}
+
+.ui.segment.new {
+    background-color: #ffffff;
+    padding: 0 15px 0 0;
+    margin: 0px;
+    border-radius: 0px;
+    height: calc(100% - 30px);
+}
+
+.deployment-container[_ngcontent-c4] {
+    background-color: #303235!important;
+    color: white!important;
+    justify-content: flex-start!important;
+    margin-left: 15px;
+    padding-top: 5px;
+}
+
+.detail[_ngcontent-c4] {
+    color: white!important;
+    font-family: 'Open Sans'!important;
+    margin: 5px 15px!important;
+    float: left!important;
+}
+
+.deployment-container>.left {
+    justify-content: none!important;
+}
+
+.deployment-container.head {
+    font-family: 'Open Sans';
+    font-size: 24px;
+    margin: 0px 0 0 0;
+}
+
+.agm-map-container-inner[_ngcontent-c9] {
+    float: left!important;
+}
+
+.agm-map-container-inner[_ngcontent-c7] {
+    width: 100%!important;
+    /*height: 60vh !important;*/
+    /*height: 100% !important;*/
+    border: 1px solid #e7ebee!important;
+}
+
+.ui.form.search {
+    float: right!important;
+    font-family: 'Open Sans' !important;
+    margin-right: 25px!important;
+}
+
+.ui.form_buttons {
+    float: right !important;
+    margin: 10px 12px 10px 10px!important;
+    font-family: 'Open Sans' !important;
+    padding-right: 0px;
+}
+
+.display-container[_ngcontent-c4] {
+    background-color: #303235!important;
+    color: white!important;
+    margin-left: 15px;
+}
+
+.display-container.head {
+    font-family: 'Open Sans';
+    font-size: 24px;
+    margin: 5px 0 0 0px;
+    justify-content: flex-start!important;
+}
+
+.display-container>.left {
+    justify-content: none!important;
+}
+
+.ui.form.content {
+    float: left!important;
+    min-height: 380px;
+}
+
+.ui.top.attached.tabular.menu.head {
+    height: 40px;
+    padding: 0 10px 0px 0!important;
+    margin: 55px 0px 0 0px!important;
+    max-width: 100%!important;
+    background-color: #f0f2f3;
+    border: solid 1px #e7ebee;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.node.item {
+    max-width: 100%;
+    height: 40px;
+    padding: 10px!important;
+    border: 1px solid #e7ebee!important;
+    border-bottom-style: none!important;
+    color: #666666!important;
+    font-weight: 600!important;
+}
+
+.node.item.active {
+    color: #283b62!important;
+}
+
+.table.content {
+    width: 100%;
+    margin-top: 10px;
+    float: left;
+}
+
+.help-block {
+    text-align: left;
+}
+
+.ui.table td {
+    vertical-align: top;
+    margin-right: 10px!important;
+    color: #4a74c4;
+}
+
+.ui.table tr th {
+    background-color: #ffffff!important;
+    color: #212121;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.ui.table tr:nth-child(even) {
+    background-color: #ffffff!important;
+}
+
+.ui.table tr:nth-child(odd) {
+    background-color: #f9f9f9!important;
+    border: solid 1px #e7ebee;
+}
+
+.svg_accord svg {
+    margin-bottom: -3px;
+}
+
+.title {
+    margin: 0 100% 0 -20px!important;
+    width: 150px!important;
+    text-align: left!important;
+    font-weight: 600;
+}
+
+.title.active svg {
+    -ms-transform: rotate(90deg);
+    /* IE 9 */
+    -webkit-transform: rotate(90deg);
+    /* Chrome, Safari, Opera */
+    transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+}
+
+.ui.left.visible.sidebar,
+.ui.right.visible.sidebar {
+    overflow: hidden;
+}
+
+.ui.bottom.attached.segment.content.tab.active {
+    margin: 0px 0px 0 0px;
+    overflow-y: auto!important;
+    overflow-x: hidden;
+    max-width: 100%;
+    justify-content: flex-start;
+    position: relative;
+    bottom: 0;
+    height: calc(100% - 97px);
+}
+
+.form-control.ng-untouched.ng-pristine.ng-valid,
+.form-control.ng-untouched.ng-dirty.ng-valid,
+.form-control.ng-untouched.ng-dirty.ng-invalid,
+.form-control.ng-untouched.ng-pristine.ng-invalid,
+.form-control.ng-touched.ng-dirty.ng-invalid,
+.form-control.ng-touched.ng-dirty.ng-valid,
+.form-control.ng-touched.ng-pristine.ng-valid,
+.form-control.ng-touched.ng-pristine.ng-invalid {
+    margin: 5px 5px 0 -5px;
+}
+
+.has-error {
+    margin: 5px 5px 5px 0;
+    padding-left: 0;
+}
+
+.slideBtnContainer {
+    position: absolute;
+    float: right;
+    width: 25px;
+    height: calc(100% - 60px);
+    right: 0;
+    bottom: 0;
+    top: 56px;
+    margin-right: 30px;
+    border: 1px solid #e7ebee!important;
+    border-left: none;
+}
+
+.slideBtnContainer button:focus {
+    outline: 0!important;
+}
+
+.chevron.left.icon,
+.chevron.right.icon {
+    margin-right: 0px!important;
+}
+
+.slideBtnContainer button {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border: none;
+}
+
+.detail_active {
+    color: #7ed321;
+    font-weight: bolder;
+}
+
+.detail_problem {
+    color: red;
+    font-weight: bolder;
+}
+
+.gm-style-cc {
+    margin-right: 50px;
+    justify-content: space-around;
+}
+
+.gmnoprint {
+    margin-right: 40px!important;
+}

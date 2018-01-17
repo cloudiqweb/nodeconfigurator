@@ -1,0 +1,33 @@
+{
+  "name": "commissioning",
+  "authors": [
+    "502650965 <troy.taillefer@ge.com>"
+  ],
+  "description": "the commissioning front end html and js code",
+  "main": "index.html",
+  "keywords": [
+    "commissioning",
+    "front",
+    "end",
+    "javascript"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "mocha": "^3.1.2",
+    "chai": "^3.5.0",
+    "sinon": "^1.17.6",
+    "blanket": "^1.1.7"
+  },
+  "dependencies": {
+    "jquery": "^3.1.1"
+  }
+}

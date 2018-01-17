@@ -1,0 +1,404 @@
+ @media only screen and (min-width:1920px){
+.logo {
+  font-size: 70px;
+  margin-top: 200px;
+}
+
+.title_nc {
+   font-size: 35px;
+   margin-top: 40px;
+}
+
+.login_box {
+ height:375px;
+ margin: 45px 0 100px 0;
+}
+
+.title_login {
+  font-size: 35px;
+  margin: 30px 0 40px 0;
+}
+
+.username {
+  font-size: 14pt;
+  height: 60px;
+}
+
+.pswd {
+  font-size: 14pt;
+ height: 60px;
+  }
+
+.login_btn {
+   font-size: 14pt;
+height: 60px;
+margin: 20px 20px 30px 20px;
+  }  
+  .btn.btn-link {
+   font-size: 15px;
+  margin: 15px 20px;
+  color: white;
+}
+
+.ui.top.attached.menu {
+  height: 80px;  
+}
+
+.sidebar.icon {
+   font-size: 2em!important;
+}
+
+.ui.pointing.dropdown.button {
+   margin: 30px 15px;
+}
+
+.ui.vertical.menu>.item{
+  padding:20px 0 0 0!important;
+}
+
+.ui.vertical.menu>.item>li{
+  padding:2px 0 0 20px!important;
+}
+
+.ui.vertical.menu>.item:last-child{
+  padding:20px 0 20px 10px!important;
+}
+
+
+.menu_head {
+  font-family: 'GEInspiraSans-Regular';
+  font-size: 30px;
+}
+
+.menu_subhead {
+  font-size: 20px;
+}
+
+
+.detail[_ngcontent-c4] {
+  margin: 10px 15px!important;
+}
+
+.deployment-container.head {
+  font-size: 24px;
+  margin: 10px 0 0 0;
+}
+
+.ui.form_buttons {padding-right:10px;
+    margin: 10px 0px 10px 10px!important;
+}
+
+.display-container.head {
+  font-size: 24px;
+  margin: 10px 0 0 0px;
+  justify-content: flex-start!important;
+}
+
+.ui.form.content {
+  height:500px;  
+}
+
+.ui.top.attached.tabular.menu.head{
+  height:50px;
+    padding:0 10px 0px 0!important;
+    margin:55px 0px 0 0px!important; 
+    max-width:100%!important;  
+}
+
+.node.item{
+  max-width:100%!important;
+  height:50px;
+  padding:10px 15px!important;
+}
+
+.ui.bottom.attached.segment.tab.active{  
+  min-height :500px; 
+}
+
+.ui.icon.button.slide{
+  margin-left:10px;
+    position: absolute;
+  right:0;
+  top:10%;
+  padding:22% 0;
+}
+
+.left.arrow.icon{
+ vertical-align:middle;
+  position: absolute;
+  right:0;
+  top:0%;
+  padding:325px 0!important;
+}
+
+}
+
+@media screen and (max-width:1919) and (min-width:1440px) {
+  .logo {
+  font-size: 60px;
+  margin-top: 180px;
+}
+
+.title_nc {
+   font-size: 30px;
+   margin-top: 35px;
+  }
+
+  .login_box {
+ height:375px;
+ margin: 45px 0 100px 0;
+ 
+}
+
+.title_login {
+  font-size: 30px;
+  margin: 25px 0 35px 0;
+ }
+
+.username {
+  font-size: 14pt;
+height: 60px;
+}
+
+.pswd {
+  font-size: 14pt;
+ height: 60px;
+  }
+
+.login_btn {
+   font-size: 14pt;
+height: 60px;
+margin: 20px 20px 30px 20px;
+  }  
+  .btn.btn-link {
+   font-size: 15px;
+  margin: 15px 20px;
+} 
+
+
+.ui.top.attached.menu {
+  height: 80px;  
+}
+
+.sidebar.icon {
+   font-size: 2em!important;
+}
+
+.ui.pointing.dropdown.button {
+   margin: 30px 15px;
+}
+
+.ui.vertical.menu>.item{
+  padding:20px 0 0 0!important;
+}
+
+.ui.vertical.menu>.item>li{
+  padding:2px 0 0 20px!important;
+}
+
+.ui.vertical.menu>.item:last-child{
+  padding:20px 0 20px 10px!important;
+}
+
+
+.menu_head {
+  font-family: 'GEInspiraSans-Regular';
+  font-size: 30px;
+}
+
+.menu_subhead {
+  font-size: 20px;
+}
+
+
+.detail[_ngcontent-c4] {
+  margin: 10px 15px!important;
+}
+
+.deployment-container.head {
+  font-size: 20px;
+  margin: 10px 0 0 0;
+}
+
+.ui.form_buttons {padding-right:10px;
+    margin: 10px 0px 10px 10px!important;
+}
+
+.display-container.head {
+  font-size: 20px;
+  margin: 10px 0 0 0px;
+  justify-content: flex-start!important;
+}
+
+.ui.form.content {
+  height:500px;  
+}
+
+.ui.top.attached.tabular.menu.head{
+  height:50px;
+  padding:0 10px 0px 0!important;
+  margin:55px 0px 0 0px!important; 
+  max-width:100%!important;  
+}
+
+.node.item{
+  max-width:100%!important;
+  height:50px;
+  padding:10px 15px!important;
+}
+
+.ui.bottom.attached.segment.tab.active{  
+  min-height :500px; 
+}
+
+.ui.icon.button.slide{
+  margin-left:10px;
+    position: absolute;
+  right:0;
+  top:9%;
+  padding:22% 0;
+}
+
+.left.arrow.icon{
+ vertical-align:middle;
+  position: absolute;
+  right:0;
+  top:0%;
+  padding:325px 0!important;
+}
+  }
+
+  @media screen and (max-width:1439px) and (min-width:1024px) {
+     .logo {
+  font-size: 55px;
+  margin-top: 100px;
+}
+
+.title_nc {
+   font-size: 30px;
+   margin-top: 20px;
+  }
+
+  .login_box {
+ height:275px;
+ margin: 30px 0 50px 0;
+}
+
+.title_login {
+  font-size: 30px;
+    margin: 20px 0 30px 0;
+
+ }
+
+.username {
+  font-size: 12pt;
+height: 45px;
+}
+
+.pswd {
+  font-size: 12pt;
+ height: 45px;
+  }
+
+.login_btn {
+   font-size: 12pt;
+height: 45px;
+margin: 15px 20px 20px 20px;
+  }  
+  .btn.btn-link {
+   font-size: 15px;
+  margin: 5px 20px;
+} 
+
+.ui.top.attached.menu {
+  height: 66px;  
+}
+
+.sidebar.icon {
+margin-bottom:25px;
+   font-size: 2em!important;
+}
+
+.ui.pointing.dropdown.button {
+   margin: 25px 5px;
+}
+
+.ui.vertical.menu>.item{
+  padding:20px 0 0 0!important;
+}
+
+.ui.vertical.menu>.item>li{
+  padding:2px 0 0 20px!important;
+}
+
+.ui.vertical.menu>.item:last-child{
+  padding:20px 0 20px 10px!important;
+}
+
+.menu_head {
+  font-size: 26px;
+}
+
+.menu_subhead {
+  font-size: 16px;
+}
+
+.detail[_ngcontent-c4] {
+  margin: 10px 15px!important;
+}
+
+.deployment-container.head {
+  font-size: 20px;
+  margin: 10px 0 0 0;
+}
+
+.ui.form_buttons {padding-right:10px;
+    margin: 10px 0px 10px 10px!important;
+}
+
+.display-container.head {
+  font-size: 20px;
+  margin: 10px 0 0 0px;
+  justify-content: flex-start!important;
+}
+
+
+.ui.form.content {
+  height:380px;  
+}
+
+.ui.top.attached.tabular.menu.head{
+  height:40px;
+    padding:0 10px 0px 0!important;
+    margin:55px 0px 0 0px!important; 
+  
+}
+
+.node.item{
+  height:40px;
+  padding:10px 15px!important;
+}
+
+.ui.bottom.attached.segment.tab.active{  
+  height :380px; 
+  overflow-y: scroll!important;
+  overflow-x: hidden!important;
+}
+
+.ui.icon.button.slide{
+    position: absolute;
+  right:0;
+  top:11%;
+  padding:31% 0;
+ 
+}
+
+.left.arrow.icon{
+ vertical-align:middle;
+  position: absolute;
+  right:0;
+  top:0%;
+  padding:200px 0!important;
+  }
+  }
+   

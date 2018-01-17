@@ -1,0 +1,1129 @@
+{
+  "tabs": [{
+        "label": "General",
+        "enable": true,
+        "items": [{
+            "label": "Geolocation",
+            "enable": true,
+            "parameters": [{
+                "label": "Latitude",
+                "description": "Latitude",
+                "enable": true,
+                "type": "real",
+                "minValue": "-90",
+                "maxValue": "90",
+                "default": 85,
+                "required": true,
+                "xpath": "core/location/lat"
+              },
+              {
+                "label": "Longitude",
+                "description": "Longitude",
+                "enable": true,
+                "type": "real",
+                "minValue": "-180",
+                "maxValue": "180",
+                "default": 43,
+                "required": true,
+                "xpath": "core/location/lon"
+              },
+              {
+                "label": "Elevation (ft)",
+                "description": "Height of fixture above sea level",
+                "enable": true,
+                "type": "real",
+                "minValue": null,
+                "maxValue": null,
+                "default": 35,
+                "required": true,
+                "xpath": "core/location/alt"
+              }
+            ]
+          },
+          {
+            "label": "System Spool",
+            "enable": true,
+            "parameters": [{
+              "label": "Total Size",
+              "description": "Total size, in MB, dedicated to all of the spools on the system",
+              "enable": true,
+              "type": "real",
+              "minValue": "0",
+              "maxValue": "1024",
+              "default": 0,
+              "required": true,
+              "xpath": "core/spool/total_size"
+            }]
+          },
+          {
+            "label": "Logging",
+            "enable": true,
+            "parameters": [{
+                "label": "Total Size",
+                "description": "Total size, in MB, dedicated to logs",
+                "enable": true,
+                "type": "real",
+                "minValue": "0",
+                "maxValue": "1024",
+                "default": 0,
+                "required": true,
+                "xpath": "core/log/total_size"
+              },
+              {
+                "label": "Info Size",
+                "description": "Size dedicated to INFO messages",
+                "enable": true,
+                "type": "int",
+                "minValue": "0",
+                "maxValue": "1024",
+                "default": 0,
+                "required": true,
+                "xpath": "core/log/info-size"
+              },
+              {
+                "label": "Error Size",
+                "description": "Size dedicated to ERROR messages",
+                "enable": true,
+                "type": "real",
+                "minValue": "0",
+                "maxValue": "1024",
+                "default": 0,
+                "required": true,
+                "xpath": "core/log/error-size"
+              },
+              {
+                "label": "Critical Size",
+                "description": "Size dedicated to CRITICAL messages",
+                "enable": true,
+                "type": "real",
+                "minValue": "0",
+                "maxValue": "1024",
+                "default": 0,
+                "required": true,
+                "xpath": "core/log/critical-size"
+              },
+              {
+                "label": "Life Cycle Size",
+                "description": "Size dedicated to life-cycle messages",
+                "enable": true,
+                "type": "real",
+                "minValue": "0",
+                "maxValue": "1024",
+                "default": 0,
+                "required": true,
+                "xpath": "core/log/life-cycle-size"
+              }
+            ]
+          },
+          {
+            "label": "Message Routing",
+            "enable": true,
+            "parameters": [{
+                "label": "Group",
+                "description": "Edge group, this will be the second segment of the topic to which the edge publishes to (example: schenectady-1)",
+                "enable": true,
+                "type": "string",
+                "minValue": "",
+                "maxValue": "",
+                "default": 0,
+                "required": true,
+                "length": 50,
+                "xpath": "core/router/group"
+              },
+              {
+                "label": "Size",
+                "description": "Size of the RAM Store and Forward",
+                "enable": true,
+                "type": "real",
+                "minValue": "0",
+                "maxValue": "1024",
+                "default": 0,
+                "required": false,
+                "xpath": "core/router/GECloud/store-forward/size"
+              }
+            ]
+          },
+          {
+            "label": "Microphone",
+            "enable": true,
+            "parameters": [{
+                "label": "Sample Rate",
+                "description": "Sample rate outputted by core microphone service",
+                "enable": true,
+                "type": "real",
+                "minValue": "0",
+                "maxValue": "1024",
+                "default": 0,
+                "required": true,
+                "xpath": "core/microphone/sample_rate"
+              },
+              {
+                "label": "Bit Depth",
+                "description": "Bitdepth outputted by core microphone service",
+                "enable": true,
+                "type": "int",
+                "minValue": "0",
+                "maxValue": "1024",
+                "default": 0,
+                "required": true,
+                "xpath": "core/microphone/bitdepth"
+              },
+              {
+                "label": "Gain",
+                "description": "gain for the microphone",
+                "enable": true,
+                "type": "int",
+                "minValue": "0",
+                "maxValue": "1024",
+                "default": 0,
+                "required": true,
+                "xpath": "core/microphone/gain"
+              },
+              {
+                "label": "Size",
+                "description": "Size of the spool for the microphone",
+                "enable": true,
+                "type": "real",
+                "minValue": "0",
+                "maxValue": "1024",
+                "default": 0,
+                "required": true,
+                "xpath": "core/microphone/spool/size"
+              },
+              {
+                "label": "TTL",
+                "description": "Time-to-Live of the microphone audio in the spool",
+                "enable": true,
+                "type": "real",
+                "minValue": "0",
+                "maxValue": "1024",
+                "default": 0,
+                "required": true,
+                "xpath": "core/microphone/spool/ttl"
+              },
+              {
+                "label": "Daily Increment",
+                "description": "24-hour increment of spooled data by the microphone",
+                "enable": true,
+                "type": "int",
+                "minValue": "0",
+                "maxValue": "1024",
+                "default": 0,
+                "required": true,
+                "xpath": "core/microphone/spool/daily-inc"
+              }
+            ]
+          },
+          {
+            "label": "Energy Metering",
+            "enable": true,
+            "parameters": [{
+                "label": "Accumulation interval",
+                "description": "Accumulation interval",
+                "enable": true,
+                "type": "int",
+                "minValue": "0",
+                "maxValue": "1024",
+                "default": 0,
+                "required": true,
+                "xpath": "core/energy-meter/acc-interval"
+              },
+              {
+                "label": "Accumulation start",
+                "description": "Accumulation start",
+                "enable": true,
+                "type": "int",
+                "minValue": "0",
+                "maxValue": "1024",
+                "default": 0,
+                "required": true,
+                "xpath": "core/energy-meter/acc-start"
+              },
+              {
+                "label": "Report interval",
+                "description": "Report interval",
+                "enable": true,
+                "type": "int",
+                "minValue": "0",
+                "maxValue": "1024",
+                "default": 0,
+                "required": true,
+                "xpath": "core/energy-meter/report-interval"
+              }
+            ]
+          },
+          {
+            "label": "Environmental Sensing",
+            "enable": true,
+            "parameters": [{
+                "label": "Report Type",
+                "description": "Report Type",
+                "enable": true,
+                "type": "string",
+                "minValue": "",
+                "maxValue": "",
+                "default": 0,
+                "required": true,
+                "xpath": "core/environmental/report-type"
+              },
+              {
+                "label": "Sample Interval",
+                "description": "Sample Interval",
+                "enable": true,
+                "type": "int",
+                "minValue": "0",
+                "maxValue": "1024",
+                "default": 0,
+                "required": true,
+                "xpath": "core/environmental/sample-interval"
+              },
+              {
+                "label": "Accumulation Internal",
+                "description": "Accumulation Internal",
+                "enable": true,
+                "type": "int",
+                "minValue": "0",
+                "maxValue": "1024",
+                "default": 0,
+                "required": true,
+                "xpath": "core/environmental/accumulation-internal"
+              },
+              {
+                "label": "Report Interval",
+                "description": "Interval at which environmental report is sent",
+                "enable": true,
+                "type": "int",
+                "minValue": "0",
+                "maxValue": "1024",
+                "default": 0,
+                "required": true,
+                "xpath": "core/environmental/report-interval"
+              },
+              {
+                "label": "Spool Size",
+                "description": "Spool Size",
+                "enable": true,
+                "type": "real",
+                "minValue": "0",
+                "maxValue": "1024",
+                "default": 0,
+                "required": true,
+                "xpath": "core/environmental/spool/size"
+              },
+              {
+                "label": "Spool TTL",
+                "description": "Spool TTL",
+                "enable": true,
+                "type": "real",
+                "minValue": "0",
+                "maxValue": "1024",
+                "default": 0,
+                "required": true,
+                "xpath": "core/environmental/spool/ttl"
+              },
+              {
+                "label": "Spool Daily Increment",
+                "description": "Spool Daily Increment",
+                "enable": true,
+                "type": "int",
+                "minValue": "0",
+                "maxValue": "1024",
+                "default": 0,
+                "required": true,
+                "xpath": "core/environmental/spool/daily-inc"
+              }
+            ]
+          },
+          {
+            "label": "Heaters",
+            "enable": true,
+            "parameters": [{
+              "label": "Threshold ON/OFF",
+              "description": "Threshold On/OFF",
+              "enable": true,
+              "type": "enum",
+              "sourceOfValues": "ON, OFF",
+              "minValue": "0",
+              "maxValue": "1",
+              "default": 0,
+              "required": true,
+              "xpath": "core/heater/threshold-on"
+            }]
+          },
+          {
+            "label": "Health Reports",
+            "enable": true,
+            "parameters": [{
+                "label": "Report Definition",
+                "description": "XML defining report. Can be used to overwrite default reports defined as part of the edge software build or to define new reports",
+                "enable": true,
+                "type": "string",
+                "minValue": "0",
+                "maxValue": "1024",
+                "default": 0,
+                "required": false,
+                "xpath": "core/reports/report/definition"
+              },
+              {
+                "label": "Interval",
+                "description": "Interval, in minutes, at which this report needs to be sent from the edge. Edge uses its default if value not set",
+                "enable": true,
+                "type": "int",
+                "minValue": "0",
+                "maxValue": "1024",
+                "default": 0,
+                "required": false,
+                "xpath": "core/reports/report/interval"
+              },
+              {
+                "label": "Report Definition",
+                "description": "XML defining report. Can be used to overwrite default reports defined as part of the edge software build or to define new reports",
+                "enable": true,
+                "type": "string",
+                "minValue": "",
+                "maxValue": "",
+                "default": 0,
+                "required": false,
+                "xpath": "core/reports/report/definition"
+              },
+              {
+                "label": "Interval",
+                "description": "Interval, in minutes, at which this report needs to be sent from the edge. Edge uses its default if value not set",
+                "enable": true,
+                "type": "int",
+                "minValue": "0",
+                "maxValue": "1024",
+                "default": 0,
+                "required": false,
+                "xpath": "core/reports/report/interval"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "Applications",
+        "enable": true,
+        "items": [{
+          "label": "Audio Noise Sensing",
+          "enable": true,
+          "parameters": [{
+              "label": "State",
+              "description": "Enabled or Disabled",
+              "enable": true,
+              "type": "enum",
+              "sourceOfValues": "ON, OFF",
+              "minValue": "",
+              "maxValue": "",
+              "default": 0,
+              "required": true,
+              "xpath": "ge-apps/AI_audionoise/state"
+            },
+            {
+              "label": "Source",
+              "description": "Identifier of the source from which audionoise is consuming audio. Should be a microphone ID for corresponding SKU",
+              "enable": true,
+              "type": "string",
+              "minValue": "",
+              "maxValue": "",
+              "default": "",
+              "required": true,
+              "xpath": "ge-apps/AI_audionoise/source"
+            },
+            {
+              "label": "Config",
+              "description": "XML-formatted Audio-noise specific configuration",
+              "enable": true,
+              "type": "string",
+              "minValue": "",
+              "maxValue": "",
+              "default": "",
+              "required": true,
+              "xpath": "ge-apps/AI_audionoise/config"
+            },
+            {
+                "label": "Size",
+                "description": "Size of the spool for the microphone",
+                "enable": true,
+                "type": "real",
+                "minValue": "0",
+                "maxValue": "1024",
+                "default": 0,
+                "required": true,
+                "xpath": "ge-apps/AI_audionoise/spool/size"
+              },
+              {
+                "label": "TTL",
+                "description": "Time-to-Live of the microphone audio in the spool",
+                "enable": true,
+                "type": "real",
+                "minValue": "0",
+                "maxValue": "1024",
+                "default": 0,
+                "required": true,
+                "xpath": "ge-apps/AI_audionoise/spool/ttl"
+              },
+              {
+                "label": "Daily Increment",
+                "description": "24-hour increment of spooled data by the microphone",
+                "enable": true,
+                "type": "int",
+                "minValue": "0",
+                "maxValue": "1024",
+                "default": 0,
+                "required": true,
+                "xpath": "ge-apps/AI_audionoise/spool/daily-inc"
+              }
+          ]
+        },
+        {
+          "label": "Pedestrian Traffic",
+          "enable": true,
+          "parameters": [{
+              "label": "State",
+              "description": "Enabled or Disabled",
+              "enable": true,
+              "type": "enum",
+              "sourceOfValues": "ON, OFF",
+              "minValue": "",
+              "maxValue": "",
+              "default": 0,
+              "required": true,
+              "xpath": "ge-apps/AI_pedestrianTraffic/state"
+            }]
+        },
+        {
+          "label": "Vehicle Traffic",
+          "enable": true,
+          "parameters": [{
+              "label": "State",
+              "description": "Enabled or Disabled",
+              "enable": true,
+              "type": "enum",
+              "sourceOfValues": "ON, OFF",
+              "minValue": "",
+              "maxValue": "",
+              "default": 0,
+              "required": true,
+              "xpath": "ge-apps/AI_vehicleTraffic/state"
+            }]
+        },
+        {
+          "label": "Vehicle",
+          "enable": true,
+          "parameters": [{
+              "label": "State",
+              "description": "Enabled or Disabled",
+              "enable": true,
+              "type": "enum",
+              "sourceOfValues": "ON, OFF",
+              "minValue": "",
+              "maxValue": "",
+              "default": 0,
+              "required": true,
+              "xpath": "ge-apps/AI_vehicle/state"
+            }]
+        },
+        {
+          "label": "Vid Pro",
+          "enable": true,
+          "parameters": [{
+              "label": "Vidpro",
+              "description": "JSON-formatted vidpro configuration",
+              "enable": true,
+              "type": "string",
+              "minValue": "",
+              "maxValue": "",
+              "default": 0,
+              "required": true,
+              "xpath": "ge-apps/vidpro"
+            }]
+        }]
+      },
+      {
+        "label": "Security",
+        "enable": true,
+        "items": [{
+          "label": "Birth Credentials",
+          "enable": true,
+          "parameters": [{
+              "label": "Certificate",
+              "description": "PEM - formatted edge's birth certificate",
+              "enable": true,
+              "type": "string",
+              "sourceOfValues": "",
+              "minValue": "",
+              "maxValue": "",
+              "default": 0,
+              "required": true,
+              "xpath": "security/config/credentials/birth/certificate"
+            },
+            {
+              "label": "Private Key",
+              "description": "PEM-formatter edge's birth private key",
+              "enable": true,
+              "type": "string",
+              "sourceOfValues": "",
+              "minValue": "",
+              "maxValue": "",
+              "default": 0,
+              "required": true,
+              "xpath": "security/config/credentials/birth/private-key"
+            }
+          ]
+        },
+        {
+          "label": "IC Client Main Credentials",
+          "enable": true,
+          "parameters":[{
+              "label": "Certificate",
+              "description": "PEM-formatted edge's client certificate to be used for GE Applications (i.e. MQTT broker for GE Apps)",
+              "enable": true,
+              "type": "string",
+              "sourceOfValues": "",
+              "minValue": "",
+              "maxValue": "",
+              "default": 0,
+              "required": true,
+              "xpath": "security/config/credentials/ic-client-main/certificate"   
+          },
+          {
+              "label": "Private Key",
+              "description": "PEM-formatted edge's client private key to be used for GE Applications (i.e. MQTT broker for GE Apps)",
+              "enable": true,
+              "type": "string",
+              "sourceOfValues": "",
+              "minValue": "",
+              "maxValue": "",
+              "default": 0,
+              "required": true,
+              "xpath": "security/config/credentials/ic-client-main/private-key"   
+          },
+          {
+              "label": "Username",
+              "description": "username to be provided as part of authentication process",
+              "enable": true,
+              "type": "string",
+              "sourceOfValues": "",
+              "minValue": "",
+              "maxValue": "",
+              "default": 0,
+              "required": true,
+              "xpath": "security/config/credentials/ic-client-main/username"
+          },
+          {
+              "label": "Password",
+              "description": "password to be provided as part of authentication process",
+              "enable": true,
+              "type": "string",
+              "sourceOfValues": "",
+              "minValue": "",
+              "maxValue": "",
+              "default": 0,
+              "required": true,
+              "xpath": "security/config/credentials/ic-client-main/password"
+          }]
+        },
+        {
+          "label": "IC Client SST Credentials",
+          "enable": true,
+          "parameters": [{
+              "label": "Certificate",
+              "description": "PEM-formatted edge's client certificate to be used for STT (i.e. MQTT broker for SST)",
+              "enable": true,
+              "type": "string",
+              "sourceOfValues": "",
+              "minValue": "",
+              "maxValue": "",
+              "default": 0,
+              "required": true,
+              "xpath": "security/config/credentials/ic-client-sst/certificate"
+          },
+          {
+              "label": "Private Key",
+              "description": "PEM-formatted edge's client private key to be used for SST (i.e. MQTT broker for SST)",
+              "enable": true,
+              "type": "string",
+              "sourceOfValues": "",
+              "minValue": "",
+              "maxValue": "",
+              "default": 0,
+              "required": true,
+              "xpath": "security/config/credentials/ic-client-sst/private-key" 
+          },
+          {
+              "label": "Username",
+              "description": "username to be provided as part of authentication process",
+              "enable": true,
+              "type": "string",
+              "sourceOfValues": "",
+              "minValue": "",
+              "maxValue": "",
+              "default": 0,
+              "required": true,
+              "xpath": "security/config/credentials/ic-client-sst/username" 
+
+          },
+          {
+              "label": "Password",
+              "description": "password to be provided as part of authentication process",
+              "enable": true,
+              "type": "string",
+              "sourceOfValues": "",
+              "minValue": "",
+              "maxValue": "",
+              "default": 0,
+              "required": true,
+              "xpath": "security/config/credentials/ic-client-sst/password" 
+          }
+          ]
+        },
+          {
+            "label": "VPN Credentials",
+            "enable": true,
+            "parameters": [{
+              "label": "Certificate",
+              "description": "PEM-formatted edge's client certificate to be used for VPN connection",
+              "enable": true,
+              "type": "string",
+              "sourceOfValues": "",
+              "minValue": "",
+              "maxValue": "",
+              "default": 0,
+              "required": true,
+              "xpath": "security/config/credentials/vpn/certificate" 
+            },
+            {
+              "label": "Private Key",
+              "description": "PEM-formatted edge's client private key to be used for VPN connection",
+              "enable": true,
+              "type": "string",
+              "sourceOfValues": "",
+              "minValue": "",
+              "maxValue": "",
+              "default": 0,
+              "required": true,
+              "xpath": "security/config/credentials/vpn/private-key" 
+            }]
+          },
+          {
+            "label": "VPN TA Credentials",
+            "enable": true,
+            "parameters": [{
+              "label": "Private Key",
+              "description": "PEM-formatted key used to sign TLS negotiation packets",
+              "enable": true,
+              "type": "string",
+              "sourceOfValues": "",
+              "minValue": "",
+              "maxValue": "",
+              "default": 0,
+              "required": true,
+              "xpath": "security/config/credentials/vpn-ta/private-key" 
+            }]
+          },
+          {
+            "label": "IC Client CA Authority",
+            "enable": true,
+            "parameters":[{
+              "label": "Certificate",
+              "description": "PEM-formatted Certificate Authority chain",
+              "enable": true,
+              "type": "string",
+              "sourceOfValues": "",
+              "minValue": "",
+              "maxValue": "",
+              "default": 0,
+              "required": true,
+              "xpath": "security/config/authority/ic-client-CA/certificate" 
+            }]
+          },
+          {
+            "label": "VPN CA Authority",
+            "enable": true,
+            "parameters": [{
+              "label": "Certificate",
+              "description": "PEM-formatted Certificate Authority chain",
+              "enable": true,
+              "type": "string",
+              "sourceOfValues": "",
+              "minValue": "",
+              "maxValue": "",
+              "default": 0,
+              "required": true,
+              "xpath": "security/config/authority/vpn-CA/certificate" 
+            }]
+          },
+          {
+            "label": "SSH Authority",
+            "enable": true,
+            "parameters": [{
+              "label": "User",
+              "description": "Linux user for which this key applies",
+              "enable": true,
+              "type": "string",
+              "sourceOfValues": "",
+              "minValue": "",
+              "maxValue": "",
+              "default": 0,
+              "required": true,
+              "xpath": "security/config/authority/ssh/user" 
+            },
+            {
+              "label": "Certificate",
+              "description": "PEM-formatter Certificate",
+              "enable": true,
+              "type": "string",
+              "sourceOfValues": "",
+              "minValue": "",
+              "maxValue": "",
+              "default": 0,
+              "required": true,
+              "xpath": "security/config/authority/ssh/certificate" 
+            }]
+          },
+          {
+            "label": "Wifi-Client Credentials",
+            "enable": true,
+            "parameters": [{
+              "label": "Password",
+              "description": "password to be provided as part of authentication process",
+              "enable": true,
+              "type": "string",
+              "sourceOfValues": "",
+              "minValue": "",
+              "maxValue": "",
+              "default": 0,
+              "required": true,
+              "xpath": "security/config/credentials/wifi-client/password" 
+            }]
+          },
+          {
+            "label": "Proximetry Credentials",
+            "enable": true,
+            "parameters": [{
+              "label": "Password",
+              "description": "password to be provided as part of authentication process",
+              "enable": true,
+              "type": "string",
+              "sourceOfValues": "",
+              "minValue": "",
+              "maxValue": "",
+              "default": 0,
+              "required": true,
+              "xpath": "security/config/credentials/proximetry/password" 
+            }]
+          }]
+      },
+      {
+        "label": "Connectivity",
+        "enable": true,
+        "items": [{
+          "label": "MQTT",
+          "enable": true,
+          "parameters": [{
+              "label": "URI",
+              "description": "URI of the form mqtt://hostname:port where the MQTT broker is hosted",
+              "enable": true,
+              "type": "string",
+              "sourceOfValues": "",
+              "minValue": "",
+              "maxValue": "",
+              "default": 0,
+              "required": true,
+              "xpath": "connectivity/config/MQTT/broker/GECloud/alternative/1/URI" 
+          },
+          {
+              "label": "Credentials",
+              "description": "Identifier of the credentials as provided via security.xml",
+              "enable": true,
+              "type": "string",
+              "sourceOfValues": "",
+              "minValue": "",
+              "maxValue": "",
+              "default": 0,
+              "required": false,
+              "xpath": "connectivity/config/MQTT/broker/GECloud/alternative/1/client/credendials" 
+          },
+          {
+              "label": "Authority",
+              "description": "Identifier of Certificate Authority as provided via security.xml",
+              "enable": true,
+              "type": "string",
+              "sourceOfValues": "",
+              "minValue": "",
+              "maxValue": "",
+              "default": 0,
+              "required": false,
+              "xpath": "connectivity/config/MQTT/broker/GECloud/alternative/1/authority" 
+          },
+          {
+              "label": "TLS Version",
+              "description": "Specifies the TLS version to be used. If not specified, v1.2",
+              "enable": true,
+              "type": "string",
+              "sourceOfValues": "",
+              "minValue": "",
+              "maxValue": "",
+              "default": 0,
+              "required": false,
+              "xpath": "connectivity/config/MQTT/broker/GECloud/alternative/1/tls-version"
+          },
+          {
+              "label": "URI",
+              "description": "URI of the form mqtt://hostname:port where the MQTT broker is hosted",
+              "enable": true,
+              "type": "string",
+              "sourceOfValues": "",
+              "minValue": "",
+              "maxValue": "",
+              "default": 0,
+              "required": true,
+              "xpath": "connectivity/config/MQTT/broker/SSTBroker/alternative/1/URI" 
+
+          },
+          {
+              "label": "Credentials",
+              "description": "Identifier of the credentials as provided via security.xml",
+              "enable": true,
+              "type": "string",
+              "sourceOfValues": "",
+              "minValue": "",
+              "maxValue": "",
+              "default": 0,
+              "required": false,
+              "xpath": "connectivity/config/MQTT/broker/SSTBroker/alternative/1/client/credendials"
+          },
+          {
+              "label": "Authority",
+              "description": "Identifier of Certificate Authority as provided via security.xml",
+              "enable": true,
+              "type": "string",
+              "sourceOfValues": "",
+              "minValue": "",
+              "maxValue": "",
+              "default": 0,
+              "required": false,
+              "xpath": "connectivity/config/MQTT/broker/SSTBroker/alternative/1/authority" 
+          },
+          {
+              "label": "TLS Version",
+              "description": "Specifies the TLS version to be used. If not specified, v1.2",
+              "enable": true,
+              "type": "string",
+              "sourceOfValues": "",
+              "minValue": "",
+              "maxValue": "",
+              "default": 0,
+              "required": false,
+              "xpath": "connectivity/config/MQTT/broker/SSTBroker/alternative/1/tls-version"
+          }]
+        },
+        {
+          "label": "Edge Manager",
+          "enable": true,
+          "parameters": [{
+              "label": "URI",
+              "description": "",
+              "enable": true,
+              "type": "string",
+              "sourceOfValues": "",
+              "minValue": "",
+              "maxValue": "",
+              "default": 0,
+              "required": true,
+              "xpath": "connectivity/config/edge-manager/URI"
+          }]
+        },
+        {
+          "label": "VPN",
+          "enable": true,
+          "parameters": [{
+              "label": "URI",
+              "description": "URI of the form vpn://hostname:port where the VPN server is hosted",
+              "enable": true,
+              "type": "string",
+              "sourceOfValues": "",
+              "minValue": "",
+              "maxValue": "",
+              "default": 0,
+              "required": true,
+              "xpath": "connectivity/config/VPN/server/alternative/1/URI"
+          },
+          {
+              "label": "credendials",
+              "description": "Identifier of the credentials configuration entry to use",
+              "enable": true,
+              "type": "string",
+              "sourceOfValues": "",
+              "minValue": "",
+              "maxValue": "",
+              "default": 0,
+              "required": true,
+              "xpath": "connectivity/config/VPN/server/alternative/1/client/credendials"
+          },
+          {
+              "label": "authority",
+              "description": "Identifier of Certificate Authority as provided via security.xml",
+              "enable": true,
+              "type": "string",
+              "sourceOfValues": "",
+              "minValue": "",
+              "maxValue": "",
+              "default": 0,
+              "required": true,
+              "xpath": "connectivity/config/VPN/server/alternative/1/authority"
+          },
+          {
+              "label": "TA",
+              "description": "Identifier of pre-shared key used in cases where server is has TLS Auth enabled as provided via security.xml",
+              "enable": true,
+              "type": "string",
+              "sourceOfValues": "",
+              "minValue": "",
+              "maxValue": "",
+              "default": 0,
+              "required": false,
+              "xpath": "connectivity/config/VPN/server/alternative/1/TA"
+          },
+          {
+              "label": "MTU",
+              "description": "Max Tranfer Unit value. Default value of 1450 will be used if not specified",
+              "enable": true,
+              "type": "string",
+              "sourceOfValues": "",
+              "minValue": "",
+              "maxValue": "",
+              "default": 0,
+              "required": false,
+              "xpath": "connectivity/config/VPN/server/alternative/1/MTU"
+            
+          },
+          {
+              "label": "protocol",
+              "description": "Must be 'tcp' or 'udp'. Defaults to 'tcp'",
+              "enable": true,
+              "type": "string",
+              "sourceOfValues": "",
+              "minValue": "",
+              "maxValue": "",
+              "default": 0,
+              "required": false,
+              "xpath": "connectivity/config/VPN/server/alternative/1/protocol"
+
+          }]
+        },
+        {
+          "label": "WIFI",
+          "enable": true,
+          "parameters": [{
+              "label": "type",
+              "description": "AP or client",
+              "enable": true,
+              "type": "string",
+              "sourceOfValues": "",
+              "minValue": "",
+              "maxValue": "",
+              "default": 0,
+              "required": true,
+              "xpath": "connectivity/config/WIFI/alternative/1/type"
+          },
+          {
+              "label": "mode",
+              "description": "2.4G or 5G or both",
+              "enable": true,
+              "type": "string",
+              "sourceOfValues": "",
+              "minValue": "",
+              "maxValue": "",
+              "default": 0,
+              "required": true,
+              "xpath": "connectivity/config/WIFI/alternative/1/mode"
+          },
+          {
+              "label": "SSID",
+              "description": "SSID of the Access Point to provide",
+              "enable": true,
+              "type": "string",
+              "sourceOfValues": "",
+              "minValue": "",
+              "maxValue": "",
+              "default": 0,
+              "required": true,
+              "xpath": "connectivity/config/WIFI/alternative/1/SSID"
+          },
+          {
+              "label": "PSK",
+              "description": "ID of credentials entry that holds WIFI client PSK",
+              "enable": true,
+              "type": "string",
+              "sourceOfValues": "",
+              "minValue": "",
+              "maxValue": "",
+              "default": 0,
+              "required": true,
+              "xpath": "connectivity/config/WIFI/alternative/1/PSK"
+          }]
+        },
+        {
+          "label": "cell-modem",
+          "enable": true,
+          "parameters": [{
+              "label": "APN",
+              "description": "APN URI",
+              "enable": true,
+              "type": "string",
+              "sourceOfValues": "",
+              "minValue": "",
+              "maxValue": "",
+              "default": 0,
+              "required": true,
+              "xpath": "connectivity/config/cell-modem/alternative/1/APN"
+          }]
+        },
+        {
+          "label": "SSH",
+          "enable": true,
+          "parameters": [{
+              "label": "URI",
+              "description": "URI of the world->edge connection which is allowed",
+              "enable": true,
+              "type": "string",
+              "sourceOfValues": "",
+              "minValue": "",
+              "maxValue": "",
+              "default": 0,
+              "required": true,
+              "xpath": "connectivity/config/SSH/server/remove-connection/URI"
+          },
+          {
+              "label": "interface",
+              "description": "Interface on which connection is allowed",
+              "enable": true,
+              "type": "string",
+              "sourceOfValues": "",
+              "minValue": "",
+              "maxValue": "",
+              "default": 0,
+              "required": true,
+              "xpath": "connectivity/config/SSH/server/remove-connection//interfaces/interface" 
+          }]
+        },
+        {
+          "label": "firewall",
+          "enable": true,
+          "parameters": [{
+              "label": "rule",
+              "description": "A rule to be applied to the firewall",
+              "enable": true,
+              "type": "string",
+              "sourceOfValues": "",
+              "minValue": "",
+              "maxValue": "",
+              "default": 0,
+              "required": true,
+              "xpath": "connectivity/config/firewall/26/rules/rule"
+          }]
+        }]
+      }
+  ]}

@@ -1,0 +1,2325 @@
+{
+  "version": "default",
+  "state": "Staged",
+  "nodeUUID": "8cc6654789",
+  "nodeSN": "SN123456789",
+  "model": {
+    "name": "default",
+    "themes": [
+      {
+        "name": "Core",
+        "description": "Core configuration parameters",
+        "visibility": "Visible",
+        "sections": [
+          {
+            "name": "Geolocation",
+            "description": "Geo location data",
+            "visibility": "Visible",
+            "parameters": [
+              {
+                "name": "Latitude",
+                "description": "Latitude",
+                "visibility": "Visible",
+                "access": "Read",
+                "data": {
+                  "gid": "config/services/core/geolocation",
+                  "sid": "",
+                  "xpath": "config/services/core/geolocation/latitude",
+                  "presence": "required",
+                  "type": "Treal",
+                  "minValue": -90.0,
+                  "maxValue": 90.0,
+                  "value": 0.0
+                }
+              },
+              {
+                "name": "Longitude",
+                "description": "Longitude",
+                "visibility": "Visible",
+                "access": "Read",
+                "data": {
+                  "gid": "config/services/core/geolocation",
+                  "sid": "",
+                  "xpath": "config/services/core/geolocation/longitude",
+                  "presence": "required",
+                  "type": "Treal",
+                  "minValue": -180.0,
+                  "maxValue": 180.0,
+                  "value": 0.0
+                }
+              },
+              {
+                "name": "Elevation",
+                "description": "Height of fixture in ft above sea level",
+                "visibility": "Visible",
+                "access": "Read",
+                "data": {
+                  "gid": "config/services/core/geolocation",
+                  "sid": "",
+                  "xpath": "config/services/core/geolocation/elevation",
+                  "presence": "required",
+                  "type": "Treal",
+                  "minValue": 0.0,
+                  "maxValue": 40.0,
+                  "value": 0.0
+                }
+              }
+            ],
+            "subsections": []
+          },
+          {
+            "name": "System Spool",
+            "description": "System spool configuration",
+            "visibility": "Visible",
+            "parameters": [
+              {
+                "name": "Total size",
+                "description": "Total size in MB dedicated to all spools on the system",
+                "visibility": "Visible",
+                "access": "ReadWrite",
+                "data": {
+                  "gid": "config/services/core/spool",
+                  "sid": "",
+                  "xpath": "config/services/core/spool/total_size",
+                  "presence": "required",
+                  "type": "Tinteger",
+                  "minValue": 0,
+                  "maxValue": 514048,
+                  "value": 10240
+                }
+              }
+            ],
+            "subsections": []
+          },
+          {
+            "name": "System Logs",
+            "description": "System logs configuration",
+            "visibility": "Visible",
+            "parameters": [
+              {
+                "name": "Total size",
+                "description": "Total size in MB dedicated to logs",
+                "visibility": "Visible",
+                "access": "ReadWrite",
+                "data": {
+                  "gid": "config/services/core/log",
+                  "sid": "",
+                  "xpath": "config/services/core/log/total-size",
+                  "presence": "required",
+                  "type": "Tinteger",
+                  "minValue": 0,
+                  "maxValue": 10240,
+                  "value": 1
+                }
+              },
+              {
+                "name": "Info logs size",
+                "description": "Size in MB dedicated to INFO logs",
+                "visibility": "Visible",
+                "access": "ReadWrite",
+                "data": {
+                  "gid": "config/services/core/log",
+                  "sid": "",
+                  "xpath": "config/services/core/log/info-size",
+                  "presence": "required",
+                  "type": "Tinteger",
+                  "minValue": 0,
+                  "maxValue": 10240,
+                  "value": 1
+                }
+              },
+              {
+                "name": "Error logs size",
+                "description": "Size in MB dedicated to ERROR logs",
+                "visibility": "Visible",
+                "access": "ReadWrite",
+                "data": {
+                  "gid": "config/services/core/log",
+                  "sid": "",
+                  "xpath": "config/services/core/log/error-size",
+                  "presence": "required",
+                  "type": "Tinteger",
+                  "minValue": 0,
+                  "maxValue": 10240,
+                  "value": 1
+                }
+              },
+              {
+                "name": "Critical logs size",
+                "description": "Size in MB dedicated to CRITICAL logs",
+                "visibility": "Visible",
+                "access": "ReadWrite",
+                "data": {
+                  "gid": "config/services/core/log",
+                  "sid": "",
+                  "xpath": "config/services/core/log/critical-size",
+                  "presence": "required",
+                  "type": "Tinteger",
+                  "minValue": 0,
+                  "maxValue": 10240,
+                  "value": 1
+                }
+              },
+              {
+                "name": "Life-cycle logs size",
+                "description": "Size in MB dedicated to life-cycle logs",
+                "visibility": "Visible",
+                "access": "ReadWrite",
+                "data": {
+                  "gid": "config/services/core/log",
+                  "sid": "",
+                  "xpath": "config/services/core/log/life-cycle-size",
+                  "presence": "required",
+                  "type": "Tinteger",
+                  "minValue": 0,
+                  "maxValue": 10240,
+                  "value": 1
+                }
+              }
+            ],
+            "subsections": []
+          },
+          {
+            "name": "MQTT Routing",
+            "description": "MQTT routing configuration",
+            "visibility": "Visible",
+            "parameters": [
+              {
+                "name": "Group",
+                "description": "This will be the second segment of the topic to which the node publishes to (example: schenectady-1)",
+                "visibility": "Visible",
+                "access": "ReadWrite",
+                "data": {
+                  "gid": "config/services/core/router",
+                  "sid": "",
+                  "xpath": "config/services/core/router/group",
+                  "presence": "required",
+                  "type": "Tstring",
+                  "minLength": 0,
+                  "maxLength": 64,
+                  "value": "Atlanta-2"
+                }
+              },
+              {
+                "name": "Store-forward size",
+                "description": "Size of RAM memory in MB allocated to messages store and forward",
+                "visibility": "Visible",
+                "access": "ReadWrite",
+                "data": {
+                  "gid": "config/services/core/router",
+                  "sid": "",
+                  "xpath": "config/services/core/router/GECloud/store-forward/size",
+                  "presence": "required",
+                  "type": "Tinteger",
+                  "minValue": 0,
+                  "maxValue": 1024,
+                  "value": 900
+                }
+              }
+            ],
+            "subsections": []
+          },
+          {
+            "name": "MQTT Monitoring",
+            "description": "MQTT monitoring configuration",
+            "visibility": "Visible",
+            "parameters": [],
+            "subsections": [
+              {
+                "name": "MonitorID 101",
+                "parameters": [
+                  {
+                    "name": "Topic",
+                    "description": "Topic name of data published by this service",
+                    "visibility": "Visible",
+                    "access": "ReadWrite",
+                    "data": {
+                      "gid": "config/services/core/MqttMonitor",
+                      "sid": "101",
+                      "xpath": "config/services/core/MqttMonitor/topic",
+                      "presence": "required",
+                      "type": "Tstring",
+                      "minLength": 0,
+                      "maxLength": 64,
+                      "value": "Vidpro-monitor"
+                    }
+                  },
+                  {
+                    "name": "Active period",
+                    "description": "Period of time (in seconds) to determine if the service is down in case it\u0027s not publishing data",
+                    "visibility": "Visible",
+                    "access": "ReadWrite",
+                    "data": {
+                      "gid": "config/services/core/MqttMonitor",
+                      "sid": "101",
+                      "xpath": "config/services/core/MqttMonitor/active_period",
+                      "presence": "required",
+                      "type": "Tinteger",
+                      "minValue": 0,
+                      "maxValue": 300,
+                      "value": 30
+                    }
+                  }
+                ]
+              },
+              {
+                "name": "MonitorID 102",
+                "parameters": [
+                  {
+                    "name": "Topic",
+                    "description": "Topic name of data published by this service",
+                    "visibility": "Visible",
+                    "access": "ReadWrite",
+                    "data": {
+                      "gid": "config/services/core/MqttMonitor",
+                      "sid": "102",
+                      "xpath": "config/services/core/MqttMonitor/topic",
+                      "presence": "required",
+                      "type": "Tstring",
+                      "minLength": 0,
+                      "maxLength": 64,
+                      "value": "SSTApp-monitor"
+                    }
+                  },
+                  {
+                    "name": "Active period",
+                    "description": "Period of time (in seconds) to determine if the service is down in case it\u0027s not publishing data",
+                    "visibility": "Visible",
+                    "access": "ReadWrite",
+                    "data": {
+                      "gid": "config/services/core/MqttMonitor",
+                      "sid": "102",
+                      "xpath": "config/services/core/MqttMonitor/active_period",
+                      "presence": "required",
+                      "type": "Tinteger",
+                      "minValue": 0,
+                      "maxValue": 300,
+                      "value": 60
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Energy Metering",
+            "description": "Energy metering configuration",
+            "visibility": "Visible",
+            "parameters": [
+              {
+                "name": "Accumulation interval",
+                "description": "Period in minutes at which energy samples are collected and averaged",
+                "visibility": "Visible",
+                "access": "ReadWrite",
+                "data": {
+                  "gid": "config/services/core/energy-meter",
+                  "sid": "5",
+                  "xpath": "config/services/core/energy-meter/acc-interval",
+                  "presence": "required",
+                  "type": "Tinteger",
+                  "enumValues": [
+                    "0",
+                    "1",
+                    "5",
+                    "15",
+                    "30",
+                    "45",
+                    "60"
+                  ],
+                  "minValue": 0,
+                  "maxValue": 60,
+                  "value": 15
+                }
+              },
+              {
+                "name": "Accumulation start",
+                "description": "Period in minutes at which a new accumulation cycle is started",
+                "visibility": "Visible",
+                "access": "ReadWrite",
+                "data": {
+                  "gid": "config/services/core/energy-meter",
+                  "sid": "5",
+                  "xpath": "config/services/core/energy-meter/acc-start",
+                  "presence": "required",
+                  "type": "Tinteger",
+                  "minValue": 0,
+                  "maxValue": 60,
+                  "value": 0
+                }
+              },
+              {
+                "name": "Report interval",
+                "description": "Period in seconds at which accumulated energy data over multiple cycles is reported to the backend",
+                "visibility": "Visible",
+                "access": "ReadWrite",
+                "data": {
+                  "gid": "config/services/core/energy-meter",
+                  "sid": "5",
+                  "xpath": "config/services/core/energy-meter/report-interval",
+                  "presence": "required",
+                  "type": "Tinteger",
+                  "enumValues": [
+                    "0",
+                    "60",
+                    "300",
+                    "900",
+                    "1800",
+                    "3600",
+                    "7200",
+                    "14400",
+                    "28800",
+                    "43200",
+                    "57600",
+                    "86400"
+                  ],
+                  "minValue": 0,
+                  "maxValue": 86400,
+                  "value": 45
+                }
+              }
+            ],
+            "subsections": []
+          },
+          {
+            "name": "Environmental Sensing",
+            "description": "Environmental sensing configuration",
+            "visibility": "Visible",
+            "parameters": [
+              {
+                "name": "Report type interval",
+                "description": "Report type",
+                "visibility": "Hidden",
+                "access": "ReadWrite",
+                "data": {
+                  "gid": "config/services/core/environmental",
+                  "sid": "6",
+                  "xpath": "config/services/core/environmental/report-type",
+                  "presence": "optional",
+                  "type": "Tenum",
+                  "enumValues": [
+                    "normal"
+                  ],
+                  "value": "normal"
+                }
+              },
+              {
+                "name": "Temperature sample interval",
+                "description": "Temperature sample interval in milliseconds",
+                "visibility": "Visible",
+                "access": "ReadWrite",
+                "data": {
+                  "gid": "config/services/core/environmental",
+                  "sid": "6",
+                  "xpath": "config/services/core/environmental/sample-intervals/temperature",
+                  "presence": "required",
+                  "type": "Tinteger",
+                  "minValue": 0,
+                  "maxValue": 3600000
+                }
+              },
+              {
+                "name": "Humidity sample interval",
+                "description": "Humidity sample interval in milliseconds",
+                "visibility": "Visible",
+                "access": "ReadWrite",
+                "data": {
+                  "gid": "config/services/core/environmental",
+                  "sid": "6",
+                  "xpath": "config/services/core/environmental/sample-intervals/humidity",
+                  "presence": "required",
+                  "type": "Tinteger",
+                  "minValue": 0,
+                  "maxValue": 3600000,
+                  "value": 1
+                }
+              },
+              {
+                "name": "Pressure sample interval",
+                "description": "Pressure sample interval in milliseconds",
+                "visibility": "Visible",
+                "access": "ReadWrite",
+                "data": {
+                  "gid": "config/services/core/environmental",
+                  "sid": "6",
+                  "xpath": "config/services/core/environmental/sample-intervals/pressure",
+                  "presence": "required",
+                  "type": "Tinteger",
+                  "minValue": 0,
+                  "maxValue": 3600000
+                }
+              },
+              {
+                "name": "Acceleration sample interval",
+                "description": "Acceleration sample interval in milliseconds",
+                "visibility": "Visible",
+                "access": "ReadWrite",
+                "data": {
+                  "gid": "config/services/core/environmental",
+                  "sid": "6",
+                  "xpath": "config/services/core/environmental/sample-intervals/acceleration",
+                  "presence": "required",
+                  "type": "Tinteger",
+                  "minValue": 0,
+                  "maxValue": 3600000
+                }
+              },
+              {
+                "name": "Magnetic flux sample interval",
+                "description": "Magnetic flux sample interval in milliseconds",
+                "visibility": "Visible",
+                "access": "ReadWrite",
+                "data": {
+                  "gid": "config/services/core/environmental",
+                  "sid": "6",
+                  "xpath": "config/services/core/environmental/sample-intervals/magflux",
+                  "presence": "required",
+                  "type": "Tinteger",
+                  "minValue": 0,
+                  "maxValue": 3600000
+                }
+              },
+              {
+                "name": "Accumulation interval",
+                "description": "Accumulation interval in minutes",
+                "visibility": "Visible",
+                "access": "ReadWrite",
+                "data": {
+                  "gid": "config/services/core/environmental",
+                  "sid": "6",
+                  "xpath": "config/services/core/environmental/accumulation-interval",
+                  "presence": "required",
+                  "type": "Tinteger",
+                  "minValue": 0,
+                  "maxValue": 60,
+                  "value": 1
+                }
+              },
+              {
+                "name": "Report interval",
+                "description": "Period in minutes at which the environment report is sent to the backend",
+                "visibility": "Visible",
+                "access": "ReadWrite",
+                "data": {
+                  "gid": "config/services/core/environmental",
+                  "sid": "6",
+                  "xpath": "config/services/core/environmental/report-interval",
+                  "presence": "required",
+                  "type": "Tinteger",
+                  "minValue": 0,
+                  "maxValue": 86400,
+                  "value": 2
+                }
+              },
+              {
+                "name": "Temperature spool size",
+                "description": "Size of the spool in MB for storing temperature data",
+                "visibility": "Visible",
+                "access": "ReadWrite",
+                "data": {
+                  "gid": "config/services/core/environmental",
+                  "sid": "6",
+                  "xpath": "config/services/core/environmental/spool/sizes/temperature",
+                  "presence": "required",
+                  "type": "Tinteger",
+                  "minValue": 0,
+                  "maxValue": 10240
+                }
+              },
+              {
+                "name": "Humidity spool size",
+                "description": "Size of the spool in MB for storing humidity data",
+                "visibility": "Visible",
+                "access": "ReadWrite",
+                "data": {
+                  "gid": "config/services/core/environmental",
+                  "sid": "6",
+                  "xpath": "config/services/core/environmental/spool/sizes/humidity",
+                  "presence": "required",
+                  "type": "Tinteger",
+                  "minValue": 0,
+                  "maxValue": 10240,
+                  "value": 2
+                }
+              },
+              {
+                "name": "Pressure spool size",
+                "description": "Size of the spool in MB for storing pressure data",
+                "visibility": "Visible",
+                "access": "ReadWrite",
+                "data": {
+                  "gid": "config/services/core/environmental",
+                  "sid": "6",
+                  "xpath": "config/services/core/environmental/spool/sizes/pressure",
+                  "presence": "required",
+                  "type": "Tinteger",
+                  "minValue": 0,
+                  "maxValue": 10240
+                }
+              },
+              {
+                "name": "Acceleration spool size",
+                "description": "Size of the spool in MB for storing acceleration data",
+                "visibility": "Visible",
+                "access": "ReadWrite",
+                "data": {
+                  "gid": "config/services/core/environmental",
+                  "sid": "6",
+                  "xpath": "config/services/core/environmental/spool/sizes/acceleration",
+                  "presence": "required",
+                  "type": "Tinteger",
+                  "minValue": 0,
+                  "maxValue": 10240
+                }
+              },
+              {
+                "name": "Magnetic flux spool size",
+                "description": "Size of the spool in MB for storing magnetic flux data",
+                "visibility": "Visible",
+                "access": "ReadWrite",
+                "data": {
+                  "gid": "config/services/core/environmental",
+                  "sid": "6",
+                  "xpath": "config/services/core/environmental/spool/sizes/magflux",
+                  "presence": "required",
+                  "type": "Tinteger",
+                  "minValue": 0,
+                  "maxValue": 10240
+                }
+              },
+              {
+                "name": "Spool ttl",
+                "description": "Time to live value in seconds for data in the spools",
+                "visibility": "Visible",
+                "access": "ReadWrite",
+                "data": {
+                  "gid": "config/services/core/environmental",
+                  "sid": "6",
+                  "xpath": "config/services/core/environmental/spool/ttl",
+                  "presence": "required",
+                  "type": "Tinteger",
+                  "minValue": 0,
+                  "maxValue": 1024,
+                  "value": 25
+                }
+              },
+              {
+                "name": "Spool daily-inc",
+                "description": "Size in bytes of environmental data to be accumulated over a day",
+                "visibility": "Visible",
+                "access": "ReadWrite",
+                "data": {
+                  "gid": "config/services/core/environmental",
+                  "sid": "6",
+                  "xpath": "config/services/core/environmental/spool/daily-inc",
+                  "presence": "required",
+                  "type": "Tinteger",
+                  "minValue": 0,
+                  "maxValue": 1024,
+                  "value": 1
+                }
+              }
+            ],
+            "subsections": []
+          },
+          {
+            "name": "Heaters",
+            "description": "Heaters configuration",
+            "visibility": "Visible",
+            "parameters": [],
+            "subsections": [
+              {
+                "name": "HeaterID 15",
+                "parameters": [
+                  {
+                    "name": "Threshold ON",
+                    "description": "Threshold at which the heater turns ON",
+                    "visibility": "Visible",
+                    "access": "ReadWrite",
+                    "data": {
+                      "gid": "config/services/core/heater",
+                      "sid": "15",
+                      "xpath": "config/services/core/heater/threshold-off",
+                      "presence": "required",
+                      "type": "Treal",
+                      "minValue": -40.0,
+                      "maxValue": 105.0,
+                      "value": 28.36
+                    }
+                  },
+                  {
+                    "name": "Threshold OFF",
+                    "description": "Threshold at which the heater turns OFF",
+                    "visibility": "Visible",
+                    "access": "ReadWrite",
+                    "data": {
+                      "gid": "config/services/core/heater",
+                      "sid": "15",
+                      "xpath": "config/services/core/heater/threshold-on",
+                      "presence": "required",
+                      "type": "Treal",
+                      "minValue": -40.0,
+                      "maxValue": 105.0,
+                      "value": 12.45
+                    }
+                  }
+                ]
+              },
+              {
+                "name": "HeaterID 16",
+                "parameters": [
+                  {
+                    "name": "Threshold ON",
+                    "description": "Threshold at which the heater turns ON",
+                    "visibility": "Visible",
+                    "access": "ReadWrite",
+                    "data": {
+                      "gid": "config/services/core/heater",
+                      "sid": "16",
+                      "xpath": "config/services/core/heater/threshold-off",
+                      "presence": "required",
+                      "type": "Treal",
+                      "minValue": -40.0,
+                      "maxValue": 105.0,
+                      "value": 38.36
+                    }
+                  },
+                  {
+                    "name": "Threshold OFF",
+                    "description": "Threshold at which the heater turns OFF",
+                    "visibility": "Visible",
+                    "access": "ReadWrite",
+                    "data": {
+                      "gid": "config/services/core/heater",
+                      "sid": "16",
+                      "xpath": "config/services/core/heater/threshold-on",
+                      "presence": "required",
+                      "type": "Treal",
+                      "minValue": -40.0,
+                      "maxValue": 105.0,
+                      "value": 14.45
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Health Reporting",
+            "description": "Health reporting configuration",
+            "visibility": "Visible",
+            "parameters": [],
+            "subsections": [
+              {
+                "name": "ReportID report_2",
+                "parameters": [
+                  {
+                    "name": "Report definition",
+                    "description": "Definition of the content of the health report",
+                    "visibility": "Hidden",
+                    "access": "Read",
+                    "data": {
+                      "gid": "config/services/core/health/reports/report",
+                      "sid": "report_2",
+                      "xpath": "config/services/core/health/reports/report/definition",
+                      "presence": "optional",
+                      "type": "Tstring",
+                      "minLength": 0,
+                      "maxLength": 1024
+                    }
+                  },
+                  {
+                    "name": "Report interval",
+                    "description": "Interval in minutes at which the health report is sent to the backend",
+                    "visibility": "Visible",
+                    "access": "ReadWrite",
+                    "data": {
+                      "gid": "config/services/core/health/reports/report",
+                      "sid": "report_2",
+                      "xpath": "config/services/core/health/reports/report/interval",
+                      "presence": "required",
+                      "type": "Tinteger",
+                      "enumValues": [
+                        "0",
+                        "1",
+                        "5",
+                        "15",
+                        "30",
+                        "60",
+                        "120",
+                        "240",
+                        "480",
+                        "720",
+                        "960",
+                        "1440"
+                      ],
+                      "minValue": 0,
+                      "maxValue": 1440,
+                      "value": 1440
+                    }
+                  }
+                ]
+              },
+              {
+                "name": "ReportID report_1",
+                "parameters": [
+                  {
+                    "name": "Report definition",
+                    "description": "Definition of the content of the health report",
+                    "visibility": "Hidden",
+                    "access": "Read",
+                    "data": {
+                      "gid": "config/services/core/health/reports/report",
+                      "sid": "report_1",
+                      "xpath": "config/services/core/health/reports/report/definition",
+                      "presence": "optional",
+                      "type": "Tstring",
+                      "minLength": 0,
+                      "maxLength": 1024
+                    }
+                  },
+                  {
+                    "name": "Report interval",
+                    "description": "Interval in minutes at which the health report is sent to the backend",
+                    "visibility": "Visible",
+                    "access": "ReadWrite",
+                    "data": {
+                      "gid": "config/services/core/health/reports/report",
+                      "sid": "report_1",
+                      "xpath": "config/services/core/health/reports/report/interval",
+                      "presence": "required",
+                      "type": "Tinteger",
+                      "enumValues": [
+                        "0",
+                        "1",
+                        "5",
+                        "15",
+                        "30",
+                        "60",
+                        "120",
+                        "240",
+                        "480",
+                        "720",
+                        "960",
+                        "1440"
+                      ],
+                      "minValue": 0,
+                      "maxValue": 1440,
+                      "value": 600
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Audio",
+        "description": "Audio configuration parameters",
+        "visibility": "Visible",
+        "sections": [
+          {
+            "name": "Microphones",
+            "description": "Microphones configuration",
+            "visibility": "Visible",
+            "parameters": [],
+            "subsections": [
+              {
+                "name": "MicrophoneID 45",
+                "parameters": [
+                  {
+                    "name": "Sample rate",
+                    "description": "Sample rate in Hz",
+                    "visibility": "Visible",
+                    "access": "Read",
+                    "data": {
+                      "gid": "config/services/core/microphone",
+                      "sid": "45",
+                      "xpath": "config/services/core/microphone/sample_rate",
+                      "presence": "required",
+                      "type": "Tenum",
+                      "enumValues": [
+                        "44100",
+                        "48000"
+                      ],
+                      "value": "48000"
+                    }
+                  },
+                  {
+                    "name": "Bit depth",
+                    "description": "Bit depth",
+                    "visibility": "Visible",
+                    "access": "Read",
+                    "data": {
+                      "gid": "config/services/core/microphone",
+                      "sid": "45",
+                      "xpath": "config/services/core/microphone/bitdepth",
+                      "presence": "required",
+                      "type": "Tenum",
+                      "enumValues": [
+                        "16",
+                        "24",
+                        "32"
+                      ],
+                      "value": "32"
+                    }
+                  },
+                  {
+                    "name": "Gain",
+                    "description": "Gain in decibels",
+                    "visibility": "Visible",
+                    "access": "ReadWrite",
+                    "data": {
+                      "gid": "config/services/core/microphone",
+                      "sid": "45",
+                      "xpath": "config/services/core/microphone/gain",
+                      "presence": "required",
+                      "type": "Treal",
+                      "minValue": -20.0,
+                      "maxValue": 20.0,
+                      "value": 3.0
+                    }
+                  },
+                  {
+                    "name": "Spool size",
+                    "description": "Size of the spool in MB for storing audio data captured by the microphone",
+                    "visibility": "Visible",
+                    "access": "ReadWrite",
+                    "data": {
+                      "gid": "config/services/core/microphone",
+                      "sid": "45",
+                      "xpath": "config/services/core/microphone/spool/size",
+                      "presence": "required",
+                      "type": "Tinteger",
+                      "minValue": 0,
+                      "maxValue": 1024,
+                      "value": 1024
+                    }
+                  },
+                  {
+                    "name": "Spool ttl",
+                    "description": "Time to live value in seconds for data in the spool",
+                    "visibility": "Visible",
+                    "access": "ReadWrite",
+                    "data": {
+                      "gid": "config/services/core/microphone",
+                      "sid": "45",
+                      "xpath": "config/services/core/microphone/spool/ttl",
+                      "presence": "required",
+                      "type": "Tinteger",
+                      "minValue": 0,
+                      "maxValue": 1024,
+                      "value": 12
+                    }
+                  },
+                  {
+                    "name": "Spool daily-inc",
+                    "description": "Size in bytes of audio data to be accumulated over a day",
+                    "visibility": "Visible",
+                    "access": "ReadWrite",
+                    "data": {
+                      "gid": "config/services/core/microphone",
+                      "sid": "45",
+                      "xpath": "config/services/core/microphone/spool/daily-inc",
+                      "presence": "required",
+                      "type": "Tinteger",
+                      "minValue": 0,
+                      "maxValue": 48000,
+                      "value": 12045
+                    }
+                  }
+                ]
+              },
+              {
+                "name": "MicrophoneID 4",
+                "parameters": [
+                  {
+                    "name": "Sample rate",
+                    "description": "Sample rate in Hz",
+                    "visibility": "Visible",
+                    "access": "Read",
+                    "data": {
+                      "gid": "config/services/core/microphone",
+                      "sid": "4",
+                      "xpath": "config/services/core/microphone/sample_rate",
+                      "presence": "required",
+                      "type": "Tenum",
+                      "enumValues": [
+                        "44100",
+                        "48000"
+                      ],
+                      "value": "48000"
+                    }
+                  },
+                  {
+                    "name": "Bit depth",
+                    "description": "Bit depth",
+                    "visibility": "Visible",
+                    "access": "Read",
+                    "data": {
+                      "gid": "config/services/core/microphone",
+                      "sid": "4",
+                      "xpath": "config/services/core/microphone/bitdepth",
+                      "presence": "required",
+                      "type": "Tenum",
+                      "enumValues": [
+                        "16",
+                        "24",
+                        "32"
+                      ],
+                      "value": "32"
+                    }
+                  },
+                  {
+                    "name": "Gain",
+                    "description": "Gain in decibels",
+                    "visibility": "Visible",
+                    "access": "ReadWrite",
+                    "data": {
+                      "gid": "config/services/core/microphone",
+                      "sid": "4",
+                      "xpath": "config/services/core/microphone/gain",
+                      "presence": "required",
+                      "type": "Treal",
+                      "minValue": -20.0,
+                      "maxValue": 20.0,
+                      "value": 3.0
+                    }
+                  },
+                  {
+                    "name": "Spool size",
+                    "description": "Size of the spool in MB for storing audio data captured by the microphone",
+                    "visibility": "Visible",
+                    "access": "ReadWrite",
+                    "data": {
+                      "gid": "config/services/core/microphone",
+                      "sid": "4",
+                      "xpath": "config/services/core/microphone/spool/size",
+                      "presence": "required",
+                      "type": "Tinteger",
+                      "minValue": 0,
+                      "maxValue": 1024,
+                      "value": 1024
+                    }
+                  },
+                  {
+                    "name": "Spool ttl",
+                    "description": "Time to live value in seconds for data in the spool",
+                    "visibility": "Visible",
+                    "access": "ReadWrite",
+                    "data": {
+                      "gid": "config/services/core/microphone",
+                      "sid": "4",
+                      "xpath": "config/services/core/microphone/spool/ttl",
+                      "presence": "required",
+                      "type": "Tinteger",
+                      "minValue": 0,
+                      "maxValue": 1024,
+                      "value": 12
+                    }
+                  },
+                  {
+                    "name": "Spool daily-inc",
+                    "description": "Size in bytes of audio data to be accumulated over a day",
+                    "visibility": "Visible",
+                    "access": "ReadWrite",
+                    "data": {
+                      "gid": "config/services/core/microphone",
+                      "sid": "4",
+                      "xpath": "config/services/core/microphone/spool/daily-inc",
+                      "presence": "required",
+                      "type": "Tinteger",
+                      "minValue": 0,
+                      "maxValue": 48000,
+                      "value": 12045
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Video",
+        "description": "Video configuration parameters",
+        "visibility": "Visible",
+        "sections": [
+          {
+            "name": "Analytics",
+            "description": "Video analytics configuration",
+            "visibility": "Visible",
+            "parameters": [
+              {
+                "name": "Configuration Data",
+                "description": "Configuration data",
+                "visibility": "Visible",
+                "access": "ReadWrite",
+                "data": {
+                  "gid": "config/apps/vidpro/JSON",
+                  "sid": "",
+                  "xpath": "config/apps/vidpro/JSON",
+                  "presence": "required",
+                  "type": "Tstring",
+                  "minLength": 0,
+                  "maxLength": 1024,
+                  "value": "{analytics:TBD}"
+                }
+              }
+            ],
+            "subsections": []
+          },
+          {
+            "name": "Recording",
+            "description": "Video recording configuration",
+            "visibility": "Visible",
+            "parameters": [
+              {
+                "name": "Spool size",
+                "description": "Size of the spool in MB for storing video data",
+                "visibility": "Visible",
+                "access": "ReadWrite",
+                "data": {
+                  "gid": "config/apps/vidpro/JSON",
+                  "sid": "",
+                  "xpath": "config/apps/vidpro/spool/size",
+                  "presence": "required",
+                  "type": "Tinteger",
+                  "minValue": 0,
+                  "maxValue": 1024,
+                  "value": 1024
+                }
+              },
+              {
+                "name": "Spool ttl",
+                "description": "Time to live value in seconds for data in the spool",
+                "visibility": "Visible",
+                "access": "ReadWrite",
+                "data": {
+                  "gid": "config/apps/vidpro/JSON",
+                  "sid": "",
+                  "xpath": "config/apps/vidpro/spool/ttl",
+                  "presence": "required",
+                  "type": "Tinteger",
+                  "minValue": 0,
+                  "maxValue": 1024,
+                  "value": 12
+                }
+              },
+              {
+                "name": "Spool daily-inc",
+                "description": "Size in bytes of video data to be accumulated over a day",
+                "visibility": "Visible",
+                "access": "ReadWrite",
+                "data": {
+                  "gid": "config/apps/vidpro/JSON",
+                  "sid": "",
+                  "xpath": "config/apps/vidpro/spool/daily-inc",
+                  "presence": "required",
+                  "type": "Tinteger",
+                  "minValue": 0,
+                  "maxValue": 48000,
+                  "value": 12045
+                }
+              }
+            ],
+            "subsections": []
+          }
+        ]
+      },
+      {
+        "name": "Security",
+        "description": "Security configuration parameters",
+        "visibility": "Visible",
+        "sections": [
+          {
+            "name": "Security Credentials",
+            "description": "Security credentials configuration",
+            "visibility": "Visible",
+            "parameters": [],
+            "subsections": [
+              {
+                "name": "ID vpn",
+                "parameters": [
+                  {
+                    "name": "Certificate",
+                    "description": "PEM formatted certificate",
+                    "visibility": "Visible",
+                    "access": "ReadWrite",
+                    "data": {
+                      "gid": "config/credentials",
+                      "sid": "vpn",
+                      "xpath": "config/credentials/certificate",
+                      "presence": "required",
+                      "type": "Tcertpublic",
+                      "minLength": 0,
+                      "maxLength": 5120,
+                      "value": ""
+                    }
+                  },
+                  {
+                    "name": "Private key",
+                    "description": "PEM formatted private key",
+                    "visibility": "Visible",
+                    "access": "ReadWrite",
+                    "data": {
+                      "gid": "config/credentials",
+                      "sid": "vpn",
+                      "xpath": "config/credentials/private-key",
+                      "presence": "required",
+                      "type": "Tprivatekey",
+                      "minLength": 0,
+                      "maxLength": 5120,
+                      "value": ""
+                    }
+                  },
+                  {
+                    "name": "Username",
+                    "description": "Username",
+                    "visibility": "Visible",
+                    "access": "ReadWrite",
+                    "data": {
+                      "gid": "config/credentials",
+                      "sid": "vpn",
+                      "xpath": "config/credentials/username",
+                      "presence": "required",
+                      "type": "Tstring",
+                      "minLength": 0,
+                      "maxLength": 64
+                    }
+                  },
+                  {
+                    "name": "Password",
+                    "description": "Password",
+                    "visibility": "Visible",
+                    "access": "ReadWrite",
+                    "data": {
+                      "gid": "config/credentials",
+                      "sid": "vpn",
+                      "xpath": "config/credentials/password",
+                      "presence": "required",
+                      "type": "Tpassword",
+                      "minLength": 8,
+                      "maxLength": 15
+                    }
+                  }
+                ]
+              },
+              {
+                "name": "ID ic-client-main",
+                "parameters": [
+                  {
+                    "name": "Certificate",
+                    "description": "PEM formatted certificate",
+                    "visibility": "Visible",
+                    "access": "ReadWrite",
+                    "data": {
+                      "gid": "config/credentials",
+                      "sid": "ic-client-main",
+                      "xpath": "config/credentials/certificate",
+                      "presence": "required",
+                      "type": "Tcertpublic",
+                      "minLength": 0,
+                      "maxLength": 5120,
+                      "value": ""
+                    }
+                  },
+                  {
+                    "name": "Private key",
+                    "description": "PEM formatted private key",
+                    "visibility": "Visible",
+                    "access": "ReadWrite",
+                    "data": {
+                      "gid": "config/credentials",
+                      "sid": "ic-client-main",
+                      "xpath": "config/credentials/private-key",
+                      "presence": "required",
+                      "type": "Tprivatekey",
+                      "minLength": 0,
+                      "maxLength": 5120,
+                      "value": ""
+                    }
+                  },
+                  {
+                    "name": "Username",
+                    "description": "Username",
+                    "visibility": "Visible",
+                    "access": "ReadWrite",
+                    "data": {
+                      "gid": "config/credentials",
+                      "sid": "ic-client-main",
+                      "xpath": "config/credentials/username",
+                      "presence": "required",
+                      "type": "Tstring",
+                      "minLength": 0,
+                      "maxLength": 64,
+                      "value": "ge_host"
+                    }
+                  },
+                  {
+                    "name": "Password",
+                    "description": "Password",
+                    "visibility": "Visible",
+                    "access": "ReadWrite",
+                    "data": {
+                      "gid": "config/credentials",
+                      "sid": "ic-client-main",
+                      "xpath": "config/credentials/password",
+                      "presence": "required",
+                      "type": "Tpassword",
+                      "minLength": 8,
+                      "maxLength": 15,
+                      "value": "gepassword"
+                    }
+                  }
+                ]
+              },
+              {
+                "name": "ID birth",
+                "parameters": [
+                  {
+                    "name": "Certificate",
+                    "description": "PEM formatted certificate",
+                    "visibility": "Visible",
+                    "access": "ReadWrite",
+                    "data": {
+                      "gid": "config/credentials",
+                      "sid": "birth",
+                      "xpath": "config/credentials/certificate",
+                      "presence": "required",
+                      "type": "Tcertpublic",
+                      "minLength": 0,
+                      "maxLength": 5120,
+                      "value": ""
+                    }
+                  },
+                  {
+                    "name": "Private key",
+                    "description": "PEM formatted private key",
+                    "visibility": "Visible",
+                    "access": "ReadWrite",
+                    "data": {
+                      "gid": "config/credentials",
+                      "sid": "birth",
+                      "xpath": "config/credentials/private-key",
+                      "presence": "required",
+                      "type": "Tprivatekey",
+                      "minLength": 0,
+                      "maxLength": 5120,
+                      "value": ""
+                    }
+                  },
+                  {
+                    "name": "Username",
+                    "description": "Username",
+                    "visibility": "Visible",
+                    "access": "ReadWrite",
+                    "data": {
+                      "gid": "config/credentials",
+                      "sid": "birth",
+                      "xpath": "config/credentials/username",
+                      "presence": "required",
+                      "type": "Tstring",
+                      "minLength": 0,
+                      "maxLength": 64
+                    }
+                  },
+                  {
+                    "name": "Password",
+                    "description": "Password",
+                    "visibility": "Visible",
+                    "access": "ReadWrite",
+                    "data": {
+                      "gid": "config/credentials",
+                      "sid": "birth",
+                      "xpath": "config/credentials/password",
+                      "presence": "required",
+                      "type": "Tpassword",
+                      "minLength": 8,
+                      "maxLength": 15
+                    }
+                  }
+                ]
+              },
+              {
+                "name": "ID wifi-client",
+                "parameters": [
+                  {
+                    "name": "Certificate",
+                    "description": "PEM formatted certificate",
+                    "visibility": "Visible",
+                    "access": "ReadWrite",
+                    "data": {
+                      "gid": "config/credentials",
+                      "sid": "wifi-client",
+                      "xpath": "config/credentials/certificate",
+                      "presence": "required",
+                      "type": "Tcertpublic",
+                      "minLength": 0,
+                      "maxLength": 5120
+                    }
+                  },
+                  {
+                    "name": "Private key",
+                    "description": "PEM formatted private key",
+                    "visibility": "Visible",
+                    "access": "ReadWrite",
+                    "data": {
+                      "gid": "config/credentials",
+                      "sid": "wifi-client",
+                      "xpath": "config/credentials/private-key",
+                      "presence": "required",
+                      "type": "Tprivatekey",
+                      "minLength": 0,
+                      "maxLength": 5120
+                    }
+                  },
+                  {
+                    "name": "Username",
+                    "description": "Username",
+                    "visibility": "Visible",
+                    "access": "ReadWrite",
+                    "data": {
+                      "gid": "config/credentials",
+                      "sid": "wifi-client",
+                      "xpath": "config/credentials/username",
+                      "presence": "required",
+                      "type": "Tstring",
+                      "minLength": 0,
+                      "maxLength": 64
+                    }
+                  },
+                  {
+                    "name": "Password",
+                    "description": "Password",
+                    "visibility": "Visible",
+                    "access": "ReadWrite",
+                    "data": {
+                      "gid": "config/credentials",
+                      "sid": "wifi-client",
+                      "xpath": "config/credentials/password",
+                      "presence": "required",
+                      "type": "Tpassword",
+                      "minLength": 8,
+                      "maxLength": 15,
+                      "value": "wifi passphrase"
+                    }
+                  }
+                ]
+              },
+              {
+                "name": "ID ic-client-sst",
+                "parameters": [
+                  {
+                    "name": "Certificate",
+                    "description": "PEM formatted certificate",
+                    "visibility": "Visible",
+                    "access": "ReadWrite",
+                    "data": {
+                      "gid": "config/credentials",
+                      "sid": "ic-client-sst",
+                      "xpath": "config/credentials/certificate",
+                      "presence": "required",
+                      "type": "Tcertpublic",
+                      "minLength": 0,
+                      "maxLength": 5120,
+                      "value": ""
+                    }
+                  },
+                  {
+                    "name": "Private key",
+                    "description": "PEM formatted private key",
+                    "visibility": "Visible",
+                    "access": "ReadWrite",
+                    "data": {
+                      "gid": "config/credentials",
+                      "sid": "ic-client-sst",
+                      "xpath": "config/credentials/private-key",
+                      "presence": "required",
+                      "type": "Tprivatekey",
+                      "minLength": 0,
+                      "maxLength": 5120,
+                      "value": ""
+                    }
+                  },
+                  {
+                    "name": "Username",
+                    "description": "Username",
+                    "visibility": "Visible",
+                    "access": "ReadWrite",
+                    "data": {
+                      "gid": "config/credentials",
+                      "sid": "ic-client-sst",
+                      "xpath": "config/credentials/username",
+                      "presence": "required",
+                      "type": "Tstring",
+                      "minLength": 0,
+                      "maxLength": 64,
+                      "value": "sst_host"
+                    }
+                  },
+                  {
+                    "name": "Password",
+                    "description": "Password",
+                    "visibility": "Visible",
+                    "access": "ReadWrite",
+                    "data": {
+                      "gid": "config/credentials",
+                      "sid": "ic-client-sst",
+                      "xpath": "config/credentials/password",
+                      "presence": "required",
+                      "type": "Tpassword",
+                      "minLength": 8,
+                      "maxLength": 15,
+                      "value": "sstpassword"
+                    }
+                  }
+                ]
+              },
+              {
+                "name": "ID vpn-ta",
+                "parameters": [
+                  {
+                    "name": "Certificate",
+                    "description": "PEM formatted certificate",
+                    "visibility": "Visible",
+                    "access": "ReadWrite",
+                    "data": {
+                      "gid": "config/credentials",
+                      "sid": "vpn-ta",
+                      "xpath": "config/credentials/certificate",
+                      "presence": "required",
+                      "type": "Tcertpublic",
+                      "minLength": 0,
+                      "maxLength": 5120,
+                      "value": ""
+                    }
+                  },
+                  {
+                    "name": "Private key",
+                    "description": "PEM formatted private key",
+                    "visibility": "Visible",
+                    "access": "ReadWrite",
+                    "data": {
+                      "gid": "config/credentials",
+                      "sid": "vpn-ta",
+                      "xpath": "config/credentials/private-key",
+                      "presence": "required",
+                      "type": "Tprivatekey",
+                      "minLength": 0,
+                      "maxLength": 5120,
+                      "value": ""
+                    }
+                  },
+                  {
+                    "name": "Username",
+                    "description": "Username",
+                    "visibility": "Visible",
+                    "access": "ReadWrite",
+                    "data": {
+                      "gid": "config/credentials",
+                      "sid": "vpn-ta",
+                      "xpath": "config/credentials/username",
+                      "presence": "required",
+                      "type": "Tstring",
+                      "minLength": 0,
+                      "maxLength": 64
+                    }
+                  },
+                  {
+                    "name": "Password",
+                    "description": "Password",
+                    "visibility": "Visible",
+                    "access": "ReadWrite",
+                    "data": {
+                      "gid": "config/credentials",
+                      "sid": "vpn-ta",
+                      "xpath": "config/credentials/password",
+                      "presence": "required",
+                      "type": "Tpassword",
+                      "minLength": 8,
+                      "maxLength": 15
+                    }
+                  }
+                ]
+              },
+              {
+                "name": "ID node-manager",
+                "parameters": [
+                  {
+                    "name": "Certificate",
+                    "description": "PEM formatted certificate",
+                    "visibility": "Visible",
+                    "access": "ReadWrite",
+                    "data": {
+                      "gid": "config/credentials",
+                      "sid": "node-manager",
+                      "xpath": "config/credentials/certificate",
+                      "presence": "required",
+                      "type": "Tcertpublic",
+                      "minLength": 0,
+                      "maxLength": 5120
+                    }
+                  },
+                  {
+                    "name": "Private key",
+                    "description": "PEM formatted private key",
+                    "visibility": "Visible",
+                    "access": "ReadWrite",
+                    "data": {
+                      "gid": "config/credentials",
+                      "sid": "node-manager",
+                      "xpath": "config/credentials/private-key",
+                      "presence": "required",
+                      "type": "Tprivatekey",
+                      "minLength": 0,
+                      "maxLength": 5120
+                    }
+                  },
+                  {
+                    "name": "Username",
+                    "description": "Username",
+                    "visibility": "Visible",
+                    "access": "ReadWrite",
+                    "data": {
+                      "gid": "config/credentials",
+                      "sid": "node-manager",
+                      "xpath": "config/credentials/username",
+                      "presence": "required",
+                      "type": "Tstring",
+                      "minLength": 0,
+                      "maxLength": 64
+                    }
+                  },
+                  {
+                    "name": "Password",
+                    "description": "Password",
+                    "visibility": "Visible",
+                    "access": "ReadWrite",
+                    "data": {
+                      "gid": "config/credentials",
+                      "sid": "node-manager",
+                      "xpath": "config/credentials/password",
+                      "presence": "required",
+                      "type": "Tpassword",
+                      "minLength": 8,
+                      "maxLength": 15,
+                      "value": "activation code"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Security Authorities",
+            "description": "Security authorities configuration",
+            "visibility": "Visible",
+            "parameters": [],
+            "subsections": [
+              {
+                "name": "ID ssh",
+                "parameters": [
+                  {
+                    "name": "Username",
+                    "description": "Username",
+                    "visibility": "Visible",
+                    "access": "ReadWrite",
+                    "data": {
+                      "gid": "config/authority",
+                      "sid": "ssh",
+                      "xpath": "config/authority/username",
+                      "presence": "required",
+                      "type": "Tstring",
+                      "minLength": 0,
+                      "maxLength": 64,
+                      "value": "activator"
+                    }
+                  },
+                  {
+                    "name": "Certificate",
+                    "description": "PEM formatted certificate",
+                    "visibility": "Visible",
+                    "access": "ReadWrite",
+                    "data": {
+                      "gid": "config/authority",
+                      "sid": "ssh",
+                      "xpath": "config/authority/certificate",
+                      "presence": "required",
+                      "type": "Tcertpublic",
+                      "minLength": 0,
+                      "maxLength": 5120,
+                      "value": "SSH public key"
+                    }
+                  }
+                ]
+              },
+              {
+                "name": "ID ic-client-CA",
+                "parameters": [
+                  {
+                    "name": "Username",
+                    "description": "Username",
+                    "visibility": "Visible",
+                    "access": "ReadWrite",
+                    "data": {
+                      "gid": "config/authority",
+                      "sid": "ic-client-CA",
+                      "xpath": "config/authority/username",
+                      "presence": "required",
+                      "type": "Tstring",
+                      "minLength": 0,
+                      "maxLength": 64
+                    }
+                  },
+                  {
+                    "name": "Certificate",
+                    "description": "PEM formatted certificate",
+                    "visibility": "Visible",
+                    "access": "ReadWrite",
+                    "data": {
+                      "gid": "config/authority",
+                      "sid": "ic-client-CA",
+                      "xpath": "config/authority/certificate",
+                      "presence": "required",
+                      "type": "Tcertpublic",
+                      "minLength": 0,
+                      "maxLength": 5120,
+                      "value": ""
+                    }
+                  }
+                ]
+              },
+              {
+                "name": "ID vpn-CA",
+                "parameters": [
+                  {
+                    "name": "Username",
+                    "description": "Username",
+                    "visibility": "Visible",
+                    "access": "ReadWrite",
+                    "data": {
+                      "gid": "config/authority",
+                      "sid": "vpn-CA",
+                      "xpath": "config/authority/username",
+                      "presence": "required",
+                      "type": "Tstring",
+                      "minLength": 0,
+                      "maxLength": 64
+                    }
+                  },
+                  {
+                    "name": "Certificate",
+                    "description": "PEM formatted certificate",
+                    "visibility": "Visible",
+                    "access": "ReadWrite",
+                    "data": {
+                      "gid": "config/authority",
+                      "sid": "vpn-CA",
+                      "xpath": "config/authority/certificate",
+                      "presence": "required",
+                      "type": "Tcertpublic",
+                      "minLength": 0,
+                      "maxLength": 5120,
+                      "value": ""
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Connectivity",
+        "description": "Connectivity configuration parameters",
+        "visibility": "Visible",
+        "sections": [
+          {
+            "name": "MQTT Brokers",
+            "description": "MQTT brokers configuration",
+            "visibility": "Visible",
+            "parameters": [],
+            "subsections": [
+              {
+                "name": "BrokerID SSTBroker",
+                "parameters": [
+                  {
+                    "name": "URI",
+                    "description": "URI of the form mqtt://hostname:port where the MQTT broker is hosted",
+                    "visibility": "Visible",
+                    "access": "ReadWrite",
+                    "data": {
+                      "gid": "connectivity/MQTT/broker/alternative",
+                      "sid": "SSTBroker",
+                      "xpath": "connectivity/MQTT/broker/alternative/URI",
+                      "presence": "required",
+                      "type": "Tstring",
+                      "minLength": 0,
+                      "maxLength": 255,
+                      "value": ""
+                    }
+                  },
+                  {
+                    "name": "Credentials",
+                    "description": "MQTT security credentials identifier",
+                    "visibility": "Visible",
+                    "access": "Read",
+                    "data": {
+                      "gid": "connectivity/MQTT/broker/alternative",
+                      "sid": "SSTBroker",
+                      "xpath": "connectivity/MQTT/broker/alternative/client/credentials",
+                      "presence": "optional",
+                      "type": "Tstring",
+                      "minLength": 0,
+                      "maxLength": 64,
+                      "value": ""
+                    }
+                  },
+                  {
+                    "name": "Authority",
+                    "description": "MQTT security authority identifier",
+                    "visibility": "Visible",
+                    "access": "Read",
+                    "data": {
+                      "gid": "connectivity/MQTT/broker/alternative",
+                      "sid": "SSTBroker",
+                      "xpath": "connectivity/MQTT/broker/alternative/authority",
+                      "presence": "optional",
+                      "type": "Tstring",
+                      "minLength": 0,
+                      "maxLength": 64,
+                      "value": ""
+                    }
+                  },
+                  {
+                    "name": "TLS Version",
+                    "description": "MQTT TLS version to be used. Default is v1.2",
+                    "visibility": "Visible",
+                    "access": "Read",
+                    "data": {
+                      "gid": "connectivity/MQTT/broker/alternative",
+                      "sid": "SSTBroker",
+                      "xpath": "connectivity/MQTT/broker/alternative/tls-version",
+                      "presence": "optional",
+                      "type": "Tstring",
+                      "enumValues": [
+                        "v1.2"
+                      ],
+                      "minLength": 1,
+                      "maxLength": 10,
+                      "value": "v1.2"
+                    }
+                  }
+                ]
+              },
+              {
+                "name": "BrokerID GEBroker",
+                "parameters": [
+                  {
+                    "name": "URI",
+                    "description": "URI of the form mqtt://hostname:port where the MQTT broker is hosted",
+                    "visibility": "Visible",
+                    "access": "ReadWrite",
+                    "data": {
+                      "gid": "connectivity/MQTT/broker/alternative",
+                      "sid": "GEBroker",
+                      "xpath": "connectivity/MQTT/broker/alternative/URI",
+                      "presence": "required",
+                      "type": "Tstring",
+                      "minLength": 0,
+                      "maxLength": 255,
+                      "value": ""
+                    }
+                  },
+                  {
+                    "name": "Credentials",
+                    "description": "MQTT security credentials identifier",
+                    "visibility": "Visible",
+                    "access": "Read",
+                    "data": {
+                      "gid": "connectivity/MQTT/broker/alternative",
+                      "sid": "GEBroker",
+                      "xpath": "connectivity/MQTT/broker/alternative/client/credentials",
+                      "presence": "optional",
+                      "type": "Tstring",
+                      "minLength": 0,
+                      "maxLength": 64,
+                      "value": ""
+                    }
+                  },
+                  {
+                    "name": "Authority",
+                    "description": "MQTT security authority identifier",
+                    "visibility": "Visible",
+                    "access": "Read",
+                    "data": {
+                      "gid": "connectivity/MQTT/broker/alternative",
+                      "sid": "GEBroker",
+                      "xpath": "connectivity/MQTT/broker/alternative/authority",
+                      "presence": "optional",
+                      "type": "Tstring",
+                      "minLength": 0,
+                      "maxLength": 64,
+                      "value": ""
+                    }
+                  },
+                  {
+                    "name": "TLS Version",
+                    "description": "MQTT TLS version to be used. Default is v1.2",
+                    "visibility": "Visible",
+                    "access": "Read",
+                    "data": {
+                      "gid": "connectivity/MQTT/broker/alternative",
+                      "sid": "GEBroker",
+                      "xpath": "connectivity/MQTT/broker/alternative/tls-version",
+                      "presence": "optional",
+                      "type": "Tstring",
+                      "enumValues": [
+                        "v1.2"
+                      ],
+                      "minLength": 1,
+                      "maxLength": 10,
+                      "value": "v1.2"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Node Manager",
+            "description": "Node manager configuration",
+            "visibility": "Visible",
+            "parameters": [
+              {
+                "name": "URI",
+                "description": "URI of the form https://hostname:port where the Node Manager Server is hosted",
+                "visibility": "Visible",
+                "access": "ReadWrite",
+                "data": {
+                  "gid": "connectivity/edge-manager",
+                  "sid": "",
+                  "xpath": "connectivity/edge-manager/URI",
+                  "presence": "required",
+                  "type": "Tstring",
+                  "minLength": 0,
+                  "maxLength": 255,
+                  "value": "https://geichttpgw.relayr.io:443"
+                }
+              }
+            ],
+            "subsections": []
+          },
+          {
+            "name": "VPN",
+            "description": "VPN configuration",
+            "visibility": "Visible",
+            "parameters": [
+              {
+                "name": "URI",
+                "description": "URI of the form vpn://hostname:port where the VPN Server is hosted",
+                "visibility": "Visible",
+                "access": "ReadWrite",
+                "data": {
+                  "gid": "connectivity/VPN/server/alternative",
+                  "sid": "",
+                  "xpath": "connectivity/VPN/server/alternative/URI",
+                  "presence": "required",
+                  "type": "Tstring",
+                  "minLength": 0,
+                  "maxLength": 255,
+                  "value": "vpn://prod.ovpn.sec.predix.io:443"
+                }
+              },
+              {
+                "name": "Credentials",
+                "description": "VPN security credentials identifier",
+                "visibility": "Visible",
+                "access": "Read",
+                "data": {
+                  "gid": "connectivity/VPN/server/alternative",
+                  "sid": "",
+                  "xpath": "connectivity/VPN/server/alternative/client/credentials",
+                  "presence": "optional",
+                  "type": "Tstring",
+                  "minLength": 0,
+                  "maxLength": 64,
+                  "value": ""
+                }
+              },
+              {
+                "name": "Authority",
+                "description": "VPN security authority identifier",
+                "visibility": "Visible",
+                "access": "Read",
+                "data": {
+                  "gid": "connectivity/VPN/server/alternative",
+                  "sid": "",
+                  "xpath": "connectivity/VPN/server/alternative/authority",
+                  "presence": "optional",
+                  "type": "Tstring",
+                  "minLength": 0,
+                  "maxLength": 64,
+                  "value": ""
+                }
+              },
+              {
+                "name": "TA",
+                "description": "VPN security TA identifier",
+                "visibility": "Visible",
+                "access": "Read",
+                "data": {
+                  "gid": "connectivity/VPN/server/alternative",
+                  "sid": "",
+                  "xpath": "connectivity/VPN/server/alternative/TA",
+                  "presence": "optional",
+                  "type": "Tstring",
+                  "minLength": 0,
+                  "maxLength": 64,
+                  "value": ""
+                }
+              },
+              {
+                "name": "MTU",
+                "description": "Max Tranfer Unit value in bytes",
+                "visibility": "Visible",
+                "access": "Read",
+                "data": {
+                  "gid": "connectivity/VPN/server/alternative",
+                  "sid": "",
+                  "xpath": "connectivity/VPN/server/alternative/MTU",
+                  "presence": "optional",
+                  "type": "Tinteger",
+                  "enumValues": [
+                    "1450"
+                  ],
+                  "minValue": 1450,
+                  "maxValue": 1450,
+                  "value": 1450
+                }
+              },
+              {
+                "name": "Protocol",
+                "description": "VPN protocol over IPv4",
+                "visibility": "Visible",
+                "access": "Read",
+                "data": {
+                  "gid": "connectivity/VPN/server/alternative",
+                  "sid": "",
+                  "xpath": "connectivity/VPN/server/alternative/protocol",
+                  "presence": "optional",
+                  "type": "Tstring",
+                  "enumValues": [
+                    "udp",
+                    "tcp"
+                  ],
+                  "minLength": 0,
+                  "maxLength": 10,
+                  "value": "udp"
+                }
+              }
+            ],
+            "subsections": []
+          },
+          {
+            "name": "WiFi",
+            "description": "WiFi configuration",
+            "visibility": "Visible",
+            "parameters": [
+              {
+                "name": "Type",
+                "description": "Connectivity type",
+                "visibility": "Visible",
+                "access": "Read",
+                "data": {
+                  "gid": "connectivity/WIFI/alternative",
+                  "sid": "",
+                  "xpath": "connectivity/WIFI/alternative/type",
+                  "presence": "required",
+                  "type": "Tstring",
+                  "enumValues": [
+                    "AP",
+                    "client"
+                  ],
+                  "minLength": 0,
+                  "maxLength": 10,
+                  "value": "client"
+                }
+              },
+              {
+                "name": "Mode",
+                "description": "WiFi connectivity mode",
+                "visibility": "Visible",
+                "access": "ReadWrite",
+                "data": {
+                  "gid": "connectivity/WIFI/alternative",
+                  "sid": "",
+                  "xpath": "connectivity/WIFI/alternative/mode",
+                  "presence": "required",
+                  "type": "Tstring",
+                  "enumValues": [
+                    "M_24G",
+                    "M_5G",
+                    "M_both"
+                  ],
+                  "minLength": 0,
+                  "maxLength": 10,
+                  "value": "M_24G"
+                }
+              },
+              {
+                "name": "SSID",
+                "description": "WiFi SSID",
+                "visibility": "Visible",
+                "access": "ReadWrite",
+                "data": {
+                  "gid": "connectivity/WIFI/alternative",
+                  "sid": "",
+                  "xpath": "connectivity/WIFI/alternative/SSID",
+                  "presence": "required",
+                  "type": "Tstring",
+                  "minLength": 6,
+                  "maxLength": 24,
+                  "value": "CityIQ Activ"
+                }
+              },
+              {
+                "name": "PSK",
+                "description": "WiFi passphrase",
+                "visibility": "Visible",
+                "access": "ReadWrite",
+                "data": {
+                  "gid": "connectivity/WIFI/alternative",
+                  "sid": "",
+                  "xpath": "connectivity/WIFI/alternative/PSK",
+                  "presence": "required",
+                  "type": "Tpassword",
+                  "minLength": 8,
+                  "maxLength": 32,
+                  "value": "wifi-client"
+                }
+              }
+            ],
+            "subsections": []
+          },
+          {
+            "name": "Cell modem",
+            "description": "Cell modem configuration",
+            "visibility": "Visible",
+            "parameters": [
+              {
+                "name": "APN",
+                "description": "Cellular network APN",
+                "visibility": "Visible",
+                "access": "ReadWrite",
+                "data": {
+                  "gid": "connectivity/cell-modem/alternative",
+                  "sid": "",
+                  "xpath": "connectivity/cell-modem/alternative/APN",
+                  "presence": "required",
+                  "type": "Tstring",
+                  "minLength": 4,
+                  "maxLength": 64,
+                  "value": "m2m005297.attz"
+                }
+              }
+            ],
+            "subsections": []
+          }
+        ]
+      },
+      {
+        "name": "Applications",
+        "description": "Applications configuration parameters",
+        "visibility": "Visible",
+        "sections": [
+          {
+            "name": "Audio Noise",
+            "description": "Audio noise application configuration",
+            "visibility": "Visible",
+            "parameters": [
+              {
+                "name": "State",
+                "description": "Application state",
+                "visibility": "Visible",
+                "access": "ReadWrite",
+                "data": {
+                  "gid": "config/apps/AI_audionoise",
+                  "sid": "",
+                  "xpath": "config/apps/AI_audionoise/state",
+                  "presence": "required",
+                  "type": "Tenum",
+                  "enumValues": [
+                    "enabled",
+                    "disabled"
+                  ],
+                  "value": "enabled"
+                }
+              },
+              {
+                "name": "Source",
+                "description": "Audio source",
+                "visibility": "Visible",
+                "access": "ReadWrite",
+                "data": {
+                  "gid": "config/apps/AI_audionoise",
+                  "sid": "",
+                  "xpath": "config/apps/AI_audionoise/source",
+                  "presence": "required",
+                  "type": "Tenum",
+                  "enumValues": [
+                    "3",
+                    "4"
+                  ],
+                  "value": "3"
+                }
+              },
+              {
+                "name": "Config",
+                "description": "Application specific configuration",
+                "visibility": "Hidden",
+                "access": "Read",
+                "data": {
+                  "gid": "config/apps/AI_audionoise",
+                  "sid": "",
+                  "xpath": "config/apps/AI_audionoise/config",
+                  "presence": "optional",
+                  "type": "Tstring",
+                  "minLength": 0,
+                  "maxLength": 255,
+                  "value": ""
+                }
+              },
+              {
+                "name": "Spool size",
+                "description": "Size of the spool in MB for storing audio noise data",
+                "visibility": "Visible",
+                "access": "ReadWrite",
+                "data": {
+                  "gid": "config/apps/AI_audionoise",
+                  "sid": "",
+                  "xpath": "config/apps/AI_audionoise/spool/size",
+                  "presence": "required",
+                  "type": "Tinteger",
+                  "minValue": 0,
+                  "maxValue": 1024,
+                  "value": 1
+                }
+              },
+              {
+                "name": "Spool ttl",
+                "description": "Time to live value in seconds for data in the spool",
+                "visibility": "Visible",
+                "access": "ReadWrite",
+                "data": {
+                  "gid": "config/apps/AI_audionoise",
+                  "sid": "",
+                  "xpath": "config/apps/AI_audionoise/spool/ttl",
+                  "presence": "required",
+                  "type": "Tinteger",
+                  "minValue": 0,
+                  "maxValue": 1024,
+                  "value": 1
+                }
+              },
+              {
+                "name": "Spool daily-inc",
+                "description": "Size in bytes of audio data to be accumulated over a day",
+                "visibility": "Visible",
+                "access": "ReadWrite",
+                "data": {
+                  "gid": "config/apps/AI_audionoise",
+                  "sid": "",
+                  "xpath": "config/apps/AI_audionoise/spool/daily-inc",
+                  "presence": "required",
+                  "type": "Tinteger",
+                  "minValue": 0,
+                  "maxValue": 48000,
+                  "value": 12
+                }
+              }
+            ],
+            "subsections": []
+          },
+          {
+            "name": "Gun Shot Detection",
+            "description": "SST application configuration",
+            "visibility": "Visible",
+            "parameters": [
+              {
+                "name": "State",
+                "description": "Application state",
+                "visibility": "Visible",
+                "access": "ReadWrite",
+                "data": {
+                  "gid": "config/apps/senseapp",
+                  "sid": "",
+                  "xpath": "config/apps/senseapp/state",
+                  "presence": "required",
+                  "type": "Tenum",
+                  "enumValues": [
+                    "enabled",
+                    "disabled"
+                  ],
+                  "value": "disabled"
+                }
+              },
+              {
+                "name": "Serial Number",
+                "description": "Serial Number",
+                "visibility": "Visible",
+                "access": "ReadWrite",
+                "data": {
+                  "gid": "config/apps/senseapp",
+                  "sid": "",
+                  "xpath": "config/apps/senseapp/serial-number",
+                  "presence": "required",
+                  "type": "Tstring",
+                  "minLength": 0,
+                  "maxLength": 20,
+                  "value": "BAD-AHNDGTE-2H00"
+                }
+              },
+              {
+                "name": "Sensor Id",
+                "description": "Sensor Id",
+                "visibility": "Visible",
+                "access": "ReadWrite",
+                "data": {
+                  "gid": "config/apps/senseapp",
+                  "sid": "",
+                  "xpath": "config/apps/senseapp/sensor-id",
+                  "presence": "required",
+                  "type": "Tstring",
+                  "minLength": 0,
+                  "maxLength": 20,
+                  "value": "ABCDED1234"
+                }
+              },
+              {
+                "name": "Source",
+                "description": "Source",
+                "visibility": "Visible",
+                "access": "ReadWrite",
+                "data": {
+                  "gid": "config/apps/senseapp",
+                  "sid": "",
+                  "xpath": "config/apps/senseapp/source",
+                  "presence": "required",
+                  "type": "Tenum",
+                  "enumValues": [
+                    "3",
+                    "4"
+                  ],
+                  "value": "4"
+                }
+              }
+            ],
+            "subsections": []
+          }
+        ]
+      }
+    ]
+  }
+}
